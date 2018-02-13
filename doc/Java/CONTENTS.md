@@ -1,4 +1,7 @@
 # Java
 ## 目录
-- [Collection集合类](./body/collection.md)  
+### Java基础
+- [Collection集合类](./Java_basics/collection.md)
 - [Synchronized的用法]()  
+### Java虚拟机
+### Java EE与中间件技术

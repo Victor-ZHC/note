@@ -1,13 +1,10 @@
 # note
 ## 目录
-- [Java](./doc/Java/CONTENTS.md)  
-- [Java EE与中间件技术]()  
-- [Java虚拟机]()  
+- [Java](./doc/Java/CONTENTS.md)   
 - [Nodejs]()  
 - [机器学习]()
 - [计算机网络]()  
 - [面试题]()  
 - [软件设计与体系结构]()  
-- [审论文]()  
 - [数据结构与算法]()  
 - [英语]()  

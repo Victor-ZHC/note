@@ -13,7 +13,7 @@ interface Queue<E>{
 * 循环列表
 * 链表
 
-![](../../../img/Java/collection_1.png)
+![](./img/collection_1.png)
 
 ## 集合接口与迭代器接口
 ### 集合接口形式
