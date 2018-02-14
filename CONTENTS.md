@@ -6,5 +6,5 @@
 - [计算机网络]()  
 - [面试题]()  
 - [软件设计与体系结构]()  
-- [数据结构与算法]()  
+- [数据结构与算法](./doc/data_structure_and_algorithm/CONTENTS.md)  
 - [英语]()  
