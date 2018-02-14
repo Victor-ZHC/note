@@ -1,4 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # 概率论基础
 ## 样本空间与随机变量
 
