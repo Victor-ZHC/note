@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # 线性代数基础
 ## 标量、向量、矩阵、张量
 * 标量：单个数组，计算的最小单元
