@@ -6,3 +6,4 @@
 - [Tree](tree/tree.md)
 - [Hashing](hashing/hashing.md)
 - [Priority Queue](list_stack_queue/priority_queue.md)
+- [Sorting](algorithm_analysis/sorting.md)
