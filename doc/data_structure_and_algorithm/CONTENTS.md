@@ -7,3 +7,5 @@
 - [Hashing](hashing/hashing.md)
 - [Priority Queue](list_stack_queue/priority_queue.md)
 - [Sorting](algorithm_analysis/sorting.md)
+- [Disjoint Set](disjoint_set/disjoint_set.md)
+- [Graph](graph/graph.md)
