@@ -84,3 +84,39 @@ public static void InsertionSort( int[] a, int n) {
         * 清空桶，比较十位
         * 清空桶，比较百位
         * 回收结果
+        
+## 复杂度分析
+* O：upper bound for function f 上限
+* Ω：lower bound for function f 下限
+* θ：when the function f can be bounded both from above and below by the same function g
+* o：表示f(x)趋近于g(x)
+
+## Binary Search 二分查找/折半搜索
+```
+public static int binarySearch( Comparable[] a, Comparable x ) {
+    int low = 0, high = a.length - 1;
+    while( low <= high ) {
+        int mid = ( low + high ) / 2;
+        if(  a[mid].compareTo(x) < 0 )
+            low = mid + 1;
+        else if( a[mid].compareTo(x) > 0 )
+            high = mid – 1;
+        else
+            return mid;
+   }
+   return NOT-FOUND;
+}
+```
+
+## Euclid's Algorithm（辗转相除法）
+* 求最大公因子 O(logN)
+```
+public static long gcd( long m, long n ) {   
+    while( n != 0 ) {    
+        long rem = m % n;
+        m = n;
+        n = rem;
+    }
+    return m;
+}
+```

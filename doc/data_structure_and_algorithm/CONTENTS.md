@@ -2,3 +2,6 @@
 ## 目录
 - [Introduction](introduction/introduction.md)
 - [Algorithm Analysis](algorithm_analysis/algorithm_analysis.md)
+- [List, Stack and Queue](list_stack_queue/list_stack_queue.md)
+- [Tree](tree/tree.md)
+- [Hashing](hashing/hashing.md)
