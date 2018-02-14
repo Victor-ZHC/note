@@ -5,3 +5,4 @@
 - [List, Stack and Queue](list_stack_queue/list_stack_queue.md)
 - [Tree](tree/tree.md)
 - [Hashing](hashing/hashing.md)
+- [Priority Queue](list_stack_queue/priority_queue.md)
