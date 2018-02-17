@@ -1,9 +1,9 @@
 # note
 ## 目录
-- [Java](./doc/java/CONTENTS.md)   
+- [Java](./doc/java/CONTENTS.md) 
 - [Nodejs]()  
 - [机器学习](./doc/machine_learning/CONTENTS.md)
-- [计算机网络]()  
+- [计算机网络](./doc/computer_network/CONTENTS.md)  
 - [面试题]()  
 - [软件设计与体系结构]()  
 - [数据结构与算法](./doc/data_structure_and_algorithm/CONTENTS.md)  
