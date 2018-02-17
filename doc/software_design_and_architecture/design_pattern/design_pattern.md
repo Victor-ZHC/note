@@ -1,45 +1,45 @@
 # 设计模式
-- [Git代码: SeniYuting/DesignPattern](https://github.com/SeniYuting/DesignPattern)
+[Git代码: SeniYuting/DesignPattern](https://github.com/SeniYuting/DesignPattern)
 ## 迭代器模式
+![](img/iterator.png)
 * Iterator Pattern，有代码
 * 目的：隐藏集合类型的底层结构，使得不同的集合类型，对外呈现统一的接口
-![](img/iterator.png)
 * 左：ConcreteAggregate 是聚合对象，存在数据和方法；
 * 右：ConcreteIterator 是迭代器，无数据；
 
 ## 代理模式
-* Proxy Pattern
 ![](img/proxy.png)
+* Proxy Pattern
 * Client不能直接访问RealSubject，而访问Proxy，并且会形成访问RealSubject的错觉；
 * Proxy和RealSubject对外接口一样；
 
 ## 原型模式
-* Prototype 数据访问控制，有代码
 ![](img/prototype.png)
+* Prototype 数据访问控制，有代码
 * 解决：类的创建问题，现方法：依赖注入；
 * 方案：采用一个原型对象，clone( )，不采用引用传递，而是在clone( )里值传递；
 
 ## 装饰者模式
-* Decorator Pattern，有代码
 ![](img/decorator.png)
+* Decorator Pattern，有代码
 * 比单独的继承灵活，但又保留了继承接口的灵活性
 
 ## Facade模式
-* 即：原controller
 ![](img/facade.png)
+* 即：原controller
 * 优点：给模块或子系统提供整体的接口（统一代替分散）；定义高层接口，调用方便；
 
 ## 策略模式
-* Strategy Pattern，有代码
 ![](img/strategy.png)
+* Strategy Pattern，有代码
 * 解决问题：模块内部变化，与需求无关，要求改变不影响模块其他部分；
 * Context：原有对象，整体，承担更多需求；
 * Strategy：抽象类，差异，变更的行为，承担很少需求；
 
 ## 状态模式
+![](img/state.png)
 * State Pattern
 * 本质即：策略模式
-![](img/state.png)
 * 对象的行为依赖于状态，状态不同，行为不同
 
 ## 桥接模式
@@ -75,6 +75,6 @@
 ![](img/observer.png)
 * 使用场景：客户端调服务器，但不知什么时候调；服务器知道什么时候调，但又不知客户端；
 
-## 命令模式
+## 命令模式
 * Command Pattern，有代码
 * 如：undo、redo
