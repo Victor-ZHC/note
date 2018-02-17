@@ -62,13 +62,13 @@
         * spEL；
 
 ## struts
+![](img/struts.png)
 * Struts2工作流程：
     1. 请求资源；
     2. Filter Dispatcher确定action；
     3. Interceptors（拦截器）；
     4. Action方法执行；
 * Action、Service、DAO层的设计
-![](img/struts.png)
 
 ## example
 * Struts -> Action

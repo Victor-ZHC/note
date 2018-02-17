@@ -76,5 +76,5 @@
 * 使用场景：客户端调服务器，但不知什么时候调；服务器知道什么时候调，但又不知客户端；
 
 ## 命令模式
-* Command Pattern，有代码
+* Command Pattern，有代码
 * 如：undo、redo
