@@ -75,7 +75,7 @@ interface Demo {
     * 有static共有getInstance方法(创建或获取实例)
 3. Servlet
 * 继承HttpServlet，重写doGet()和doPost()方法
-* 生命周期
+* 生命周期
     * 三个核心方法：init()，service()以及destroy()
     * Servlet生命周期的初始化阶段，web容器通过init()方法初始化Servlet实例
     * 初始化后，web容器调用Servlet的service()方法处理每一个请求
