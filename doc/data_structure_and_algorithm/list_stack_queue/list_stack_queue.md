@@ -26,3 +26,5 @@ class ListNode {
 ## 队列
 * FIFO（first-in-first-out）
 * 链表实现或者数组实现
+
+[返回目录](../CONTENTS.md)

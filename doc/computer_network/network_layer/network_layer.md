@@ -69,3 +69,5 @@
     1. 静态转换Static Nat：内部网络的私有IP地址转换为公有IP地址，IP地址一对一；
     2. 动态转换Dynamic Nat：内部网络的私有IP地址转换为公用IP地址时，IP地址随机；
     3. 端口多路复用OverLoad：存在端口转换；
+
+[返回目录](../CONTENTS.md)

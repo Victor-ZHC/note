@@ -78,3 +78,5 @@
 ## 命令模式
 * Command Pattern，有代码
 * 如：undo、redo
+
+[返回目录](../CONTENTS.md)

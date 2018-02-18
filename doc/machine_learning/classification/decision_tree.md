@@ -67,3 +67,5 @@ $$split\_info_A(D)=-\sum_{j=1}^{v}{\frac{D_j}{D}\log_2(\frac{\vert{D_j}\vert}{\v
 增益率被定义为：
 
 $$gain\_ratio(A)=\frac{gain(A)}{split\_info(A)}$$
+
+[返回目录](../CONTENTS.md)

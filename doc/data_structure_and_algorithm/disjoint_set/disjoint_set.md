@@ -24,3 +24,5 @@ public int find( int x ) {
         return find( s[x] );
 }
 ```
+
+[返回目录](../CONTENTS.md)

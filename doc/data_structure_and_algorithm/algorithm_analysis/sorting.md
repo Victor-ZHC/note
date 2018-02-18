@@ -186,3 +186,5 @@ template <class Type> void SelectExchange( datalist<Type> & list, const int i) {
 ![](img/radix1.PNG)
 ![](img/radix2.PNG)
 * 稳定性：稳定
+
+[返回目录](../CONTENTS.md)

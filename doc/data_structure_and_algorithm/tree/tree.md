@@ -124,3 +124,5 @@ private BinaryNode insert( Comparable x, BinaryNode t ) {
     5. 每个叶节点中，子树棵数n可以>m，也可以<m
     6. 根节点本身又是叶节点，则节点格式同叶节点
 * 特点：关键码只分布在叶节点上
+
+[返回目录](../CONTENTS.md)

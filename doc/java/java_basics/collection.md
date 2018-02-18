@@ -101,3 +101,5 @@ interface Iterator<E>{
 * LinkedHashSet&LinkedHashMap：所有对象被双链表连接，每次在get和put时，条目都会从当前位置删除，挪到链表末尾，可以用于实现“最近最少使用”原则
 * EnumSet：枚举类型元素集的高效实现，只有静态工厂方法
 * IdentityHashMap：不适用hashCode函数进行散列，而是通过System.identityHashCode实现，对hash的比较是通过“==”而不是“equals”
+
+[返回目录](../CONTENTS.md)
