@@ -49,7 +49,7 @@
 ## Docker
 * Virtual Machine与Docker
     * Virtual Machine
-![](img/virtualmachine.png)
+    ![](img/virtualmachine.png)
     * Docker
-![](img/docker.png)
-到：[Docker Practice](https://yeasy.gitbooks.io/docker_practice/content/introduction/what.html)
+    ![](img/docker.png)
+* 到：[Docker Practice](https://yeasy.gitbooks.io/docker_practice/content/introduction/what.html)
