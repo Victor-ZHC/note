@@ -1,5 +1,5 @@
 # 长难词
-|||
+|单词|释义|
 |:---|:---|
 |Alienate|使疏远、离间|
 |Separate、Depart、Divide|划分、分割、隔开|
