@@ -5,5 +5,6 @@
 
 ## Learn
 - [web](learn/web.md)
+- [distribution](learn/distribution.md)
 
 [返回首页](../../CONTENTS.md)
