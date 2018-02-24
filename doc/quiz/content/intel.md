@@ -57,9 +57,10 @@ interface Demo {
 * ArrayList（线程不安全）和Vector（线程安全）
     * Vector所有方法都同步synchronized了
         * synchronized实现：monitorenter和monitorexit
-* HashMap（线程不安全）、HashTable（线程安全）、ConcurrentHashMap（线程安全）
+* HashMap（线程不安全）、HashSet（线程不安全）、HashTable（线程安全）、ConcurrentHashMap（线程安全）
     * HashTable所有方法都同步synchronized了，但效率低
     * ConcurrentHashMap每一个Segment都拥有一个锁
+* TreeSet：基于TreeMap（线程不安全）、TreeMap：基于红黑树-自平衡二叉查找树（线程不安全）
 5. JVM垃圾回收机制
 * 引用计数，若引用为0，则回收
 6. Java类加载机制

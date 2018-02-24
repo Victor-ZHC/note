@@ -60,7 +60,7 @@ interface Iterator<E>{
     void remove();
 }
 ```
-* for each也可用于便利集合内元素，本质是带有迭代器的循环；可以使用在任何实现了Iterable接口的对象，该接口仅包含一个方法： Iterator<E> iterator()
+* for each也可用于遍历集合内元素，本质是带有迭代器的循环；可以使用在任何实现了Iterable接口的对象，该接口仅包含一个方法： Iterator<E> iterator()
 * 元素被访问的顺序取决于集合类型，ArrayList被迭代时按照索引从0开始，HashSet被迭代时按照随机的顺序
 
 ## 具体集合

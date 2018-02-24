@@ -2,7 +2,7 @@
 ## 目录
 ### Java基础
 - [Collection集合类](./java_basics/collection.md)
-- [Synchronized的用法]()  
+- [Synchronized的用法](./java_basics/synchronized.md)  
 ### Java虚拟机
 - [运行时数据区域](./java_virtual_machine/run-time_data_areas.md)
 - [对象创建](./java_virtual_machine/create_object.md)
