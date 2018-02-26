@@ -50,6 +50,8 @@
 * 程序退出时；
 7. 什么时候用finally
 * 例如：文件或数据库的close
+* 如果try或catch有return指令，finally仍然会执行，流程跳到finally，然后回调return；
+
 
 ## 终面2
 1. Object子类的方法举例

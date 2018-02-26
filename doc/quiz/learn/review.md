@@ -22,4 +22,13 @@
 ## 线程状态
 * 新建（new）、可运行（runnable）、运行（running）、阻塞（blocked）、死亡（dead）
 
+## 异常级别
+* Exception(IOException, InterruptedException, RuntimeException(ClassCastException, NullPointerException))
+* ClassCastException类型转化出错
+
+## Math类
+* Math构造函数是私有的，不可以实例化，并且是final类，不可以被继承
+* 因此：不可以被实例化 1）抽象类 2）私有构造函数
+
+
 [返回目录](../CONTENTS.md)

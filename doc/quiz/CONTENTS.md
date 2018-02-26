@@ -8,6 +8,8 @@
 - [fujitsu](content/fujitsu.md)
 - [qiniu](content/qiniu.md)
 - [guotaijunan](content/guotaijunan.md)
+- [pinduoduo](content/pinduoduo.md)
+- [xinghuan](content/xinghuan.md)
 
 ## Learn
 - [web](learn/web.md)

@@ -53,6 +53,9 @@ interface Demo {
 |构造器|可以有|必须无|
 |与正常Java区别|不能实例化|不是类|
 |访问修饰符|可以public,protected,default|仅public|
+    * 抽象类可以有抽象方法和非抽象方法，但是抽象方法必须在抽象类中
+    * 接口的方法必须都是抽象的
+    * 类可以实现多个接口，但只能继承一个抽象类
 4. 线程安全
 * ArrayList（线程不安全）和Vector（线程安全）
     * Vector所有方法都同步synchronized了

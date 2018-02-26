@@ -9,18 +9,20 @@
 
 ## Sort
 * Bubble Sort 冒泡排序 
-    * O((n-1)*n/2)=O(n^2)，每次扫描将最大元素冒泡到最后
+    * $O(n^2)$，每次扫描将最大元素冒泡到最后
 ```
-public static void Bubble(int[] a , int n) {
-    //Bubble largest element in a[0:n-1] to right
-    for(int i=0; i<n-1; i++)
-        if(a[i]>a[i+1])
-            swap(a[i],a[i+1]);
-}
-public static void BubbleSort(int[] a, int n) {
-    //Sort a[0:n-1] using a bubble sort
-    for(int i=n ;i>1; i--)
-        Bubble(a,i);
+public int[] sort(int[] a) {
+    int temp;
+    for (int i = a.length - 1; i > 0; i--) {
+        for (int j = 0; j < i; j++) {
+            if (a[j + 1] < a[j]) {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+    return a;
 }
 ```
 

@@ -6,5 +6,7 @@
 - [词根篇](./cet6/root.md)
 - [高频词](./cet6/high_frequency_words.md)
 - [长难词](./cet6/long_difficult_words.md)
+### other
+- [其他](./other/english.md)
 
 [返回首页](../../CONTENTS.md)
