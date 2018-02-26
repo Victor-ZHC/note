@@ -3,7 +3,7 @@
 * top命令查看启动的进程的CPU占用率，找出100%的进程
 2. 程序不断GC
 * 因为：资源泄漏
-3. Comparator
+3. Comparator
 ```
 public class Compare implements Comparator<Activity> {
     @Override

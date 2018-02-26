@@ -1,6 +1,6 @@
 # 星环科技
 1. Spark相关，参考[Spark](../learn/distribution.md)
-2. 小于等于k的最大连续子序列和
+2. 小于等于k的最大连续子序列和
 ```
 public int maxSumNoLargerThan1(int[] array, int k){  
     int r = Integer.MIN_VALUE;  
