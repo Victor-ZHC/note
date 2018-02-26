@@ -7,11 +7,11 @@
 * Session存放在服务器端，而Cookie存放在客户端
 * Session实现的两种机制：Cookie机制和URL重写
 * Cookie有两种类型：有生命周期和无生命周期
-* Session运行依赖Session ID，Session ID可以存在于Cookie中
+* Session运行依赖Session ID，Session ID可以存在于Cookie中
 * 用户验证一般会用Session
 4. 层次遍历使用的数据结构：队列，因为先进先出
 5. OSI七层模型及其简介
-* 七层模型：
+* 七层模型：
     * 物理层：二进制传输，信号，介质
     * 数据链路层：帧，媒介访问控制
     * 网络层：寻址和最优路径选择
@@ -33,3 +33,5 @@
 * 搜索服务：UDDI（统一描述、发现与集成）
 * 调用服务：SOAP（1.0简单对象访问协议）
 * 发布服务：WSDL（WebService定义/描述语言）
+
+[返回目录](../CONTENTS.md)

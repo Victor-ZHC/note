@@ -90,7 +90,7 @@ interface Demo {
 * Isolation隔离性
 * Durability持久性
 
-## Deep Learning现场
+## Deep Learning现场
 1. a-z表示26进制
 * 写代码，$26^0+26^1+...$
 2. n个数找前k大
