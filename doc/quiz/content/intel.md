@@ -90,4 +90,12 @@ interface Demo {
 * Isolation隔离性
 * Durability持久性
 
+## Deep Learning现场
+1. a-z表示26进制
+* 写代码，$26^0+26^1+...$
+2. n个数找前k大
+* 写代码
+    * 法一：堆排序n*logn
+    * 法二：先选择k个数，按序排列（k*logk），再二分查找比对，往里插，用n*logk（每一个二分查找是logk，一共n-k次）（避免查找后数组值的移动，将前k个数用链表表示）
+
 [返回目录](../CONTENTS.md)
