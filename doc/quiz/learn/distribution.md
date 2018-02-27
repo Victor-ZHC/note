@@ -34,9 +34,13 @@
     * 定义：整个数据传输过程
     * Shuffle写过程：一个分区的数据计算完毕并写入磁盘的过程
     * Shuffle读过程：在子RDD分区计算过程中，把所需数据从父RDD拉取过来的过程
-* 容错：血缘机制
+* 容错：血缘机制（Lineage）
 * 宽依赖和窄依赖
-* Transform和Action
+    * 窄依赖：父RDD的每个分区可以被至多一个子RDD分区使用
+    * 宽依赖：父RDD的每个分区可以被多个子RDD分区使用
+* Transformation和Action（转换和动作）
+    * Transformation是延迟操作，如：Map、Filter
+    * Action启动计算操作，如：Reduce
 
 ## Storm
 * 分布式高容错的实时计算系统
