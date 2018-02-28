@@ -74,9 +74,9 @@ public class EscapeGCTest {
 }
 ```
 
-> 结果：
-> finalize method executed!
-> i am still alive
-> i am dead
+> 结果：  
+finalize method executed!  
+i am still alive  
+i am dead  
 
 [返回目录](../CONTENTS.md)
