@@ -1,7 +1,7 @@
 # note
 ## 目录
 - [Java](./doc/java/CONTENTS.md) 
-- [Nodejs]()  
+- [Nodejs](./doc/nodejs/CONTENTS.md)  
 - [机器学习](./doc/machine_learning/CONTENTS.md)
 - [计算机网络](./doc/computer_network/CONTENTS.md)  
 - [面试题](./doc/quiz/CONTENTS.md)  
