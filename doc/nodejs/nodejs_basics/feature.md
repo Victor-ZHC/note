@@ -28,7 +28,7 @@ fs.readFile('filename.txt', 'utf8', function(err,data) {
     * 大量计算占用CPU导致无法继续调用异步I/O
 
 ## 跨平台
-	* Linux
-	* Windows
+* Linux
+* Windows
 
 [返回目录](../CONTENTS.md)
