@@ -94,6 +94,7 @@ public static void InsertionSort( int[] a, int n) {
 * o：表示f(x)趋近于g(x)
 
 ## Binary Search 二分查找/折半搜索
+* 非递归方式
 ```
 public static int binarySearch( Comparable[] a, Comparable x ) {
     int low = 0, high = a.length - 1;

@@ -34,7 +34,7 @@
     ```
     void dfs( Vertex v ) {
         v.visited = true;
-        for each w adjacent  to v
+        for each w adjacent to v
             if( !w.visited )
                 dfs(w);
     }

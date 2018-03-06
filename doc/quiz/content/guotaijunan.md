@@ -2,13 +2,13 @@
 1. 排序的顺序与初始顺序无关的排序算法举例：堆排序
 2. 对称加密与不对称加密，分别举例：
 * 对称加密：加密和解密使用相同密钥，举例：DES（数据加密标准）、IDEA（国际数据加密算法）
-* 不对称加密：采用公钥和私钥，公钥加密使用私钥才能解，私钥加密使用公钥才能解，举例：RSA、DSA（数字签名用）
+* 不对称加密：采用公钥和私钥，公钥加密使用私钥才能解，私钥加密使用公钥才能解，举例：RSA（公钥加密算法）、DSA（数字签名用）
 3. Cookie与Session的不同点
 * Session存放在服务器端，而Cookie存放在客户端
 * Session实现的两种机制：Cookie机制和URL重写
 * Cookie有两种类型：有生命周期和无生命周期
 * Session运行依赖Session ID，Session ID可以存在于Cookie中
-* 用户验证一般会用Session
+* 用户验证一般会用Session`(HttpSession session = request.getSession();)`
 4. 层次遍历使用的数据结构：队列，因为先进先出
 5. OSI七层模型及其简介
 * 七层模型：

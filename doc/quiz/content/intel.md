@@ -56,13 +56,14 @@ interface Demo {
     * 抽象类可以有抽象方法和非抽象方法，但是抽象方法必须在抽象类中
     * 接口的方法必须都是抽象的
     * 类可以实现多个接口，但只能继承一个抽象类
+    * java 8允许给接口添加非抽象的实现，只需要加上default关键字
 4. 线程安全
 * ArrayList（线程不安全）和Vector（线程安全）
     * Vector所有方法都同步synchronized了
         * synchronized实现：monitorenter和monitorexit
 * HashMap（线程不安全）、HashSet（线程不安全）、HashTable（线程安全）、ConcurrentHashMap（线程安全）
     * HashTable所有方法都同步synchronized了，但效率低
-    * ConcurrentHashMap每一个Segment都拥有一个锁
+    * ConcurrentHashMap的分段锁称为Segment，ConcurrentHashMap采用了分段锁的设计，只有在同一个分段内才存在竞态关系，不同的分段锁之间没有锁竞争。
 * TreeSet：基于TreeMap（线程不安全）、TreeMap：基于红黑树-自平衡二叉查找树（线程不安全）
 5. JVM垃圾回收机制
 * 引用计数，若引用为0，则回收
@@ -71,7 +72,7 @@ interface Demo {
 
 ## Deep Learning面试
 1. Java内部类和外部类
-* 内部类可以获取外部类的private属性，外部类可以访问内部类的private属性，真正执行是编译器的acess$0, access$1等
+* 内部类可以获取外部类的private属性，外部类可以访问内部类的private属性，真正执行是编译器的`acess$0`, `access$1`等
 2. 设计模式
 * 单例模式
     * 私有构造函数

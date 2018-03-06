@@ -3,8 +3,9 @@
 * notify()唤醒一个
 * notifyAll()唤醒所有
 2. 线程wait和sleep的区别
-* Thread类的方法：sleep()，可以在任何地方使用
-* Object类的方法：wait()和notify()，只能在同步控制块中使用
+* sleep()是Thread类的方法，而wait()是Object类的方法
+* 调用sleep()，线程不会释放对象锁
+* 调用wait()，线程放弃对象锁，只有调用notify()后，才唤醒
 3. Session
 * 创建：
     * 指令`<%@page session="true">`（注：Servlet缺省无Session，而JSP默认session="true"），若JSP中不写，则JSP文件被编译成Servlet时会有：

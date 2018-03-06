@@ -48,6 +48,7 @@
 * session有timeout机制，过时失效
 * Web容器在客户端和服务器端传送标识符Session ID
 * Session实现的两种机制：Cookie机制和URL重写
+* https://www.cnblogs.com/xdp-gacl/p/3855702.html
 
 ## Cookie机制
 ### 步骤：
