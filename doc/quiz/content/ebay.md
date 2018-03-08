@@ -28,5 +28,10 @@
     * 堆排序O($n*\log_{2}n$)：不稳定
 9. forword和redirect的区别
     * redirect客户端与服务器有2次通信，一次：根据请求，得到302应答；一次：由302应答转向新页面；
+10. Java Transient关键字
+    * 阻止序列化和反序列化
+11. Java Volatile关键字
+    * 确保变量的更新通知到其他线程
+    * 但是访问volatile变量不会执行加锁操作，因此线程不会阻塞，volatile变量是一种比synchronized关键字更轻量级的同步
 
 [返回目录](../CONTENTS.md)

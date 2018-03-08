@@ -26,6 +26,7 @@
 - [Servlet](javaEE_and_middleware/servlet.md)
 - [JSP技术](javaEE_and_middleware/jsp.md)
 - [SSH](javaEE_and_middleware/ssh.md)
+- [Spring Boot](javaEE_and_middleware/spring-boot.md)
 - [Other](javaEE_and_middleware/other.md)
 
 [返回首页](../../CONTENTS.md)
