@@ -181,10 +181,10 @@ public V put(K key, V value) {
 
 final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
     Node<K,V>[] tab; Node<K,V> p; int n, i;
-    // 若map未初始化，初始化map
+    // 若table未初始化，初始化table
     if ((tab = table) == null || (n = tab.length) == 0)
         n = (tab = resize()).length;
-    // 若hash值没有冲突，将实例放入数组中
+    // 若hash值没有冲突，新建Node<K,V>元素，将实例放入数组中
     if ((p = tab[i = (n - 1) & hash]) == null)
         tab[i] = newNode(hash, key, value, null);
     // 解决冲突
@@ -199,6 +199,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
             e = ((TreeNode<K,V>)p).putTreeVal(this, tab, hash, key, value);
         // 开散列
         else {
+            // 遍历链表
             for (int binCount = 0; ; ++binCount) {
                 // 添加到链表尾部，如果超过阈值，变为红黑树
                 if ((e = p.next) == null) {
