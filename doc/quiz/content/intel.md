@@ -69,6 +69,9 @@ interface Demo {
 * 引用计数，若引用为0，则回收
 6. Java类加载机制
 * Class文件的生命周期：加载（Loading）、验证（Verification）、准备（Preparation）、解析（Resolution）、初始化（Initialization）、使用（Using）、卸载（Unloading）
+7. 同步和互斥
+* 互斥是某一资源仅允许一个访问者访问，排他性
+* 同步是在互斥的基础上，通过其他机制实现访问者对资源的有序访问
 
 ## Deep Learning面试
 1. Java内部类和外部类
