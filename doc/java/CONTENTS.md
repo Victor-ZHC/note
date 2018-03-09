@@ -3,6 +3,10 @@
 ### Java基础
 - [Collection集合类](./java_basics/collection.md)
 - [Synchronized的用法](./java_basics/synchronized.md)  
+
+### Java源码解读
+- [HashMap](./java_source/hash_map.md)
+
 ### Java虚拟机
 - [运行时数据区域](./java_virtual_machine/run-time_data_areas.md)
 - [对象创建](./java_virtual_machine/create_object.md)
