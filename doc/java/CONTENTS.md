@@ -5,6 +5,7 @@
 - [Synchronized的用法](./java_basics/synchronized.md)  
 
 ### Java源码解读
+- [String](./java_source/string.md)
 - [HashMap](./java_source/hash_map.md)
 
 ### Java虚拟机
