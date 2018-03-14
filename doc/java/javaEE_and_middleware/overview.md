@@ -4,6 +4,8 @@
 * Web组件，如：servlet, JSP
 * EJB组件，如：enterprise bean
     * 两种类型的enterprise bean: session bean和message-driven bean
+    * Session Bean：为客户端提供服务，分为两种，有状态（每次返回新的SessionBean）和无状态（每次返回同一个SessionBean）
+    * Message Driven Bean，基于JMS（Java Message Service），有两种工作模型：p2p（点对点），发布订阅模型
 
 ## 容器
 * 支持组件和底层平台功能的接口，3类：

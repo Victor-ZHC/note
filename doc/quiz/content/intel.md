@@ -61,8 +61,8 @@ interface Demo {
 * ArrayList（线程不安全）和Vector（线程安全）
     * Vector所有方法都同步synchronized了
         * synchronized实现：monitorenter和monitorexit
-* HashMap（线程不安全）、HashSet（线程不安全）、HashTable（线程安全）、ConcurrentHashMap（线程安全）
-    * HashTable所有方法都同步synchronized了，但效率低
+* HashMap（线程不安全）、HashSet（线程不安全）、HashTable & SysnchronizedMap（线程安全）、ConcurrentHashMap（线程安全）
+    * HashTable & SysnchronizedMap所有方法都同步synchronized了，但效率低
     * ConcurrentHashMap的分段锁称为Segment，ConcurrentHashMap采用了分段锁的设计，只有在同一个分段内才存在竞态关系，不同的分段锁之间没有锁竞争。
 * TreeSet：基于TreeMap（线程不安全）、TreeMap：基于红黑树-自平衡二叉查找树（线程不安全）
 5. JVM垃圾回收机制
