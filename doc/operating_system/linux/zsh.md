@@ -13,6 +13,7 @@
 |%D|System date(YY-MM-DD)|
 |%~|current working directory|
 |%d|The current working directory|
+
 常用配置
 ```
  export PS1="${ret_status} %{$fg[blue]%}[%D{%Y-%m-%d %I:%M:%S}] %{$fg[green]%}%n@%M %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)
