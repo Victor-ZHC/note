@@ -83,6 +83,9 @@ public boolean equals(Object anObject) {
     return false;
 }
 ```
+* 对于字符串而言
+    * ==比较两个对象在内存中的额首地址
+    * equals()比较字符串中所包含内容是否相等
 
 ### contentEquals函数
 对比内容是否一致
