@@ -75,7 +75,7 @@ interface Iterator<E>{
 * ArrayList是非同步的，但是执行速度快
 ### 3. 散列集
 * 散列表（HashTable）由链表数组实现，每个链表是被称为一个桶（bucket）
-* HashSet是基于HashTable实现的，contains方法不用对所有元素进行遍历，所以时间上更快
+* HashSet是基于HashMap实现的，contains方法不用对所有元素进行遍历，所以时间上更快
 ### 4. 树集
 * TreeSet与散列集相似，但是它是有序集合，所有对象都被排序
 * 实现方式是红-黑树

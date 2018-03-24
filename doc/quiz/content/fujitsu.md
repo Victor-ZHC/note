@@ -16,9 +16,11 @@
     * session.setAttribute(String key, Object obj);
     * session.getAttribute(String key);
 4. 监听器
+* 监听器Listener在application,session,request三个对象创建、销毁或者添加修改删除属性时自动执行
 * 一般implements HttpSessionListener, ServletContextListener, ServletContextAttributeListener
 * 贯穿整个Servlet生命周期，在web.xml中配置，类上有@WebListener
 5. 过滤器
+* 对处理结果过滤
 * implements Filter，有doFilter()方法，在web.xml中配置,类上有@WebFilter
 6. Linux下的编辑器
    vi，gedit，emacs
