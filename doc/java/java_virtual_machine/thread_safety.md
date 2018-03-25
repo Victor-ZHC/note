@@ -39,9 +39,9 @@
         * 重入锁之所以可以重入，是同一个线程可以反复使用其占用的锁，相当于一个偏向锁
     * 补充：AbstractQueuedSynchronizer（**AQS**）
         * AQS使用一个int类型的volatile变量（命名为：state）维护同步状态
-        * 实现锁的获取require()与释放release()
-        * 排他模式（exclusive mode）
-        * require()至少调用一次tryAcquire()，同理release()
+        * 实现锁的获取require()与释放release()
+        * 排他模式（exclusive mode）和共享模式（shared mode）
+        * require()至少调用一次tryAcquire()，同理release()
 
 * 线程被阻塞后唤醒时的代价是较大的，被称为阻塞同步（Blocking Synchronization），是一种悲观并发策略
 ### 非阻塞同步

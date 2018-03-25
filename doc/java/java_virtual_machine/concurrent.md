@@ -2,7 +2,7 @@
 
 ## 乐观锁和悲观锁（实现线程安全）
 ### 定义
-* 乐观锁：假设冲突不经常发生，先提交操作，如果失败就重试
+* 乐观锁：假设冲突不经常发生，先提交操作，如果失败就重试
 * 悲观锁：假设会发生冲突，有强烈的独占和排他性
 
 ### 乐观锁应用
@@ -34,7 +34,7 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
         * TryAcquire()方法：如果锁state为0则尝试获取锁，否则：识别获取锁的线程是否为当前占据锁的线程，如果是再次成功获取
 * 信号量Semaphore
     * 信号量是对锁的扩展，sychronized和重入锁ReentrantLock一次只允许一个线程访问一个资源，信号量可以指定多个线程同时访问一个资源
-    * 信号量可以用于做**流量控制**，控制最大并发量
+    * 信号量可以用于做**流量控制**，控制最大并发量
 
 ### 锁优化
 * 适应性自旋（Adaptive Spinning）、锁消除
@@ -60,10 +60,10 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
 * newScheduledThreadPool()
     * 返回可指定线程数量的ScheduledExecutorService对象的定时线程池，可以：1）给定时间执行某任务（schedule()）；2）周期性执行某任务（scheduleAtFixedRate()）；3）固定延迟后，周期性执行某任务（scheduleWithFixedDelay()）。
 
-### ThreadPoolExecutor线程池类
+### ThreadPoolExecutor线程池类
 * 关键构造函数参数
     * corePoolSize：池中所保存的线程数，包括空闲线程
-    * workQueue：被提交但尚未执行的任务队列
+    * workQueue：被提交但尚未执行的任务队列
 * 关键数据结构
     * HashSet<Worker> workers：一个worker对应一个线程，线程池通过workers包含多个线程
     * BlockingQueue<Runnable> workQueue：当线程池中的线程数超过容量，任务提交后，进入阻塞队列
@@ -85,6 +85,6 @@ HashMap data = future.get();
 注：高并发访问数据库优化
 1. 读写分离（master、slave数据库分别读写）
 2. 分表分库存储
-3. 缓存如Memcached，数据库修改后更新缓存
+3. 缓存如Memcached，数据库修改后更新缓存
 4. 将关系型数据库变为非关系型
 5. 重要业务数据存储、不重要业务数据可临时存储
