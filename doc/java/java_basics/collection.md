@@ -69,16 +69,19 @@ interface Iterator<E>{
 * Java中一般是双向链表
 * 在尾部插入元素依靠链表的add方法
 * 在中间插入元素依靠Iteator的add方法
+* LinkedList采用双向链表实现
 ### 2. 数组列表
 * 适合使用get和set方式随机访问元素
-* Vector类是同步的，不同线程可以安全的访问Vector
-* ArrayList是非同步的，但是执行速度快
+* ArrayList是非同步的，执行速度快（初始大小为10，按1.5倍速度扩容）
+* **Vector**类是同步的，不同线程可以安全访问（+capacityIncrement扩容 or 2倍）
+* Stack继承于Vector，实现LIFO，是同步的
 ### 3. 散列集
-* 散列表（HashTable）由链表数组实现，每个链表是被称为一个桶（bucket）
-* HashSet是基于HashMap实现的，contains方法不用对所有元素进行遍历，所以时间上更快
+* HashMap，线程不安全，参考[HashMap](../java_source/hash_map.md)
+* HashSet是基于HashMap实现的，线程不安全，不接受重复对象，不支持get(int)获取指定位置元素
+* 散列表（Hashtable）由链表数组实现，每个链表是被称为一个桶（bucket），线程安全
 ### 4. 树集
-* TreeSet与散列集相似，但是它是有序集合，所有对象都被排序
-* 实现方式是红-黑树
+* TreeSet与散列集相似，但是它是有序集合，所有对象都被排序（调用集合元素的compareTo方法）
+* 实现方式是红-黑树，基于comparator比较key放在树的左边还是右边
 ### 5. 对象比较
 * 在有序集合中，对象的比较是通过Comparable接口实现
 * 接口中有一个int compareTo(T other)方法。对于a.compareTo(b)来说，当a与b相等，将返回0；a在b之前，返回负值；a在b之后，返回正值

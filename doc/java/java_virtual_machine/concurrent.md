@@ -30,7 +30,11 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
             1. 等待可中断：持有锁的线程长期不释放锁，等待锁的线程可放弃等待
             2. 可实现公平锁：公平锁指：多个线程等待同一个锁时，必须按照申请的顺序依次获得锁（默认是：非公平锁）
             3. 锁绑定多个条件：一个ReentrantLock对象可以同时绑定多个Condition对象（多次调用newCondition()方法），而synchronized只能一个
-* 信号量
+        * 关键：1）volatile修饰state，判断是否有加锁；2）AQS同步器实现锁的获取与释放；
+        * TryAcquire()方法：如果锁state为0则尝试获取锁，否则：识别获取锁的线程是否为当前占据锁的线程，如果是再次成功获取
+* 信号量Semaphore
+    * 信号量是对锁的扩展，sychronized和重入锁ReentrantLock一次只允许一个线程访问一个资源，信号量可以指定多个线程同时访问一个资源
+    * 信号量可以用于做**流量控制**，控制最大并发量
 
 ### 锁优化
 * 适应性自旋（Adaptive Spinning）、锁消除
@@ -40,10 +44,47 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
 * 读写锁可以由悲观锁或乐观锁实现，一般：读不加锁，写加锁
 
 ## 线程池
+### 定义
+* 为避免系统频繁地创建和销毁线程，让创建的线程复用
+![](./img/concurrent_1.png)
+* Executors是一个静态工厂类，可以取得特定功能的线程池
 
+### 不同特性的线程池（Executors中获取）
+* newFixedThreadPool()
+    * 返回固定数量的线程池
+    * 当有新任务提交时，线程池中若有空闲线程，则立即执行，否则将任务放入任务队列
+* newSingleThreadExecutor()
+    * 返回只有一个线程的线程池
+* newCachedThreadPool()
+    * 返回一个可以根据实际情况调整线程数量的线程池，任务增多线程增加，任务减少线程减少
+* newScheduledThreadPool()
+    * 返回可指定线程数量的ScheduledExecutorService对象的定时线程池，可以：1）给定时间执行某任务（schedule()）；2）周期性执行某任务（scheduleAtFixedRate()）；3）固定延迟后，周期性执行某任务（scheduleWithFixedDelay()）。
+
+### ThreadPoolExecutor线程池类
+* 关键构造函数参数
+    * corePoolSize：池中所保存的线程数，包括空闲线程
+    * workQueue：被提交但尚未执行的任务队列
+* 关键数据结构
+    * HashSet<Worker> workers：一个worker对应一个线程，线程池通过workers包含多个线程
+    * BlockingQueue<Runnable> workQueue：当线程池中的线程数超过容量，任务提交后，进入阻塞队列
+
+## Future和FutureTask
+* Future模式是多线程开发中常见的设计模式，核心思想是：异步调用
+* Future是接口，FutureTask是具体实现类
+* 用法
+```
+Future<HashMap> future = getDataFromRemote();
+2 //do something
+HashMap data = future.get();
+```
 
 ## 缓存
 * 写流程：1）淘汰cache；2）再写db
 * 读流程：1）读cache，如果数据命中hit则返回；2）如果数据未命中miss则读db；3）将db中读取出来的数据入缓存；
 
-## 分布式情况下负载均衡
+注：高并发访问数据库优化
+1. 读写分离（master、slave数据库分别读写）
+2. 分表分库存储
+3. 缓存如Memcached，数据库修改后更新缓存
+4. 将关系型数据库变为非关系型
+5. 重要业务数据存储、不重要业务数据可临时存储

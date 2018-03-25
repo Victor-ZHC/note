@@ -64,6 +64,7 @@ interface Demo {
 * HashMap（线程不安全）、HashSet（线程不安全）、HashTable & SysnchronizedMap（线程安全）、ConcurrentHashMap（线程安全）
     * HashTable & SysnchronizedMap所有方法都同步synchronized了，但效率低
     * ConcurrentHashMap的分段锁称为Segment，ConcurrentHashMap采用了分段锁的设计，只有在同一个分段内才存在竞态关系，不同的分段锁之间没有锁竞争。
+    * ConcurrentHashMap基于concurrencyLevel划分出多个Segment对key-value进行存储，避免每次put操作都得锁住整个数组。默认情况下，可允许16个线程并发无阻塞的操作集合对象。
 * TreeSet：基于TreeMap（线程不安全）、TreeMap：基于红黑树-自平衡二叉查找树（线程不安全）
 5. JVM垃圾回收机制
 * 引用计数，若引用为0，则回收
