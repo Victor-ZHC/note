@@ -25,6 +25,7 @@
 - [线程](./java_virtual_machine/thread.md)
 - [线程安全](./java_virtual_machine/thread_safety.md)
 - [锁优化](./java_virtual_machine/lock_optimization.md)
+- [java高并发](./java_virtual_machine/concurrent.md)
 
 ### Java EE与中间件技术
 - [Overview](javaEE_and_middleware/overview.md)
