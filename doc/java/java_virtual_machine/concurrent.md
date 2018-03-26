@@ -35,7 +35,7 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
 * 信号量Semaphore
     * 信号量是对锁的扩展，sychronized和重入锁ReentrantLock一次只允许一个线程访问一个资源，信号量可以指定多个线程同时访问一个资源
     * 信号量可以用于做**流量控制**，控制最大并发量
-    * 实现与ReentrantLock一样，依靠继承自AbstractQueuedSynchronizer的Sync实现主要功能，只是调用共享模式的：tryAcquireShared()方法
+    * 实现与ReentrantLock一样，依靠继承自AbstractQueuedSynchronizer的Sync实现主要功能，只是调用共享模式的：tryAcquireShared()方法
 
 ### 锁优化
 * 适应性自旋（Adaptive Spinning）、锁消除
@@ -67,7 +67,7 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
     * workQueue：被提交但尚未执行的任务队列
 * 关键数据结构
     * HashSet<Worker> workers：一个worker对应一个线程，线程池通过workers包含多个线程
-    * BlockingQueue<Runnable> workQueue：当线程池中的线程数超过容量，任务提交后，进入阻塞队列
+    * BlockingQueue<Runnable> workQueue：当线程池中的线程数超过容量，任务提交后，进入阻塞队列
     
 ## Future和FutureTask
 * Future模式是多线程开发中常见的设计模式，核心思想是：异步调用
