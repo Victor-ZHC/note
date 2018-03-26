@@ -79,6 +79,7 @@ interface Iterator<E>{
 * HashMap，线程不安全，参考[HashMap](../java_source/hash_map.md)
 * HashSet是基于HashMap实现的，线程不安全，不接受重复对象，不支持get(int)获取指定位置元素
 * 散列表（Hashtable）由链表数组实现，每个链表是被称为一个桶（bucket），线程安全
+* ConcurrentHashMap采用了分段锁的设计，只有在同一个分段内才存在竞态关系，不同的分段锁之间没有锁竞争。默认情况下，可允许16个线程并发无阻塞的操作集合对象。
 ### 4. 树集
 * TreeSet与散列集相似，但是它是有序集合，所有对象都被排序（调用集合元素的compareTo方法）
 * 实现方式是红-黑树，基于comparator比较key放在树的左边还是右边

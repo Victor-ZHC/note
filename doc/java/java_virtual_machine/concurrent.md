@@ -31,10 +31,11 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
             2. 可实现公平锁：公平锁指：多个线程等待同一个锁时，必须按照申请的顺序依次获得锁（默认是：非公平锁）
             3. 锁绑定多个条件：一个ReentrantLock对象可以同时绑定多个Condition对象（多次调用newCondition()方法），而synchronized只能一个
         * 关键：1）volatile修饰state，判断是否有加锁；2）AQS同步器实现锁的获取与释放；
-        * TryAcquire()方法：如果锁state为0则尝试获取锁，否则：识别获取锁的线程是否为当前占据锁的线程，如果是再次成功获取
+        * TryAcquire()方法：如果锁state为0则尝试获取锁，否则：识别获取锁的线程是否为当前占据锁的线程，如果是再次成功获取
 * 信号量Semaphore
     * 信号量是对锁的扩展，sychronized和重入锁ReentrantLock一次只允许一个线程访问一个资源，信号量可以指定多个线程同时访问一个资源
     * 信号量可以用于做**流量控制**，控制最大并发量
+    * 实现与ReentrantLock一样，依靠继承自AbstractQueuedSynchronizer的Sync实现主要功能，只是调用共享模式的：tryAcquireShared()方法
 
 ### 锁优化
 * 适应性自旋（Adaptive Spinning）、锁消除
@@ -47,7 +48,7 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
 ### 定义
 * 为避免系统频繁地创建和销毁线程，让创建的线程复用
 ![](./img/concurrent_1.png)
-* Executors是一个静态工厂类，可以取得特定功能的线程池
+* Executors是一个静态工厂类，可以取得特定功能的线程池
 
 ### 不同特性的线程池（Executors中获取）
 * newFixedThreadPool()
@@ -66,15 +67,16 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
     * workQueue：被提交但尚未执行的任务队列
 * 关键数据结构
     * HashSet<Worker> workers：一个worker对应一个线程，线程池通过workers包含多个线程
-    * BlockingQueue<Runnable> workQueue：当线程池中的线程数超过容量，任务提交后，进入阻塞队列
-
+    * BlockingQueue<Runnable> workQueue：当线程池中的线程数超过容量，任务提交后，进入阻塞队列
+    
 ## Future和FutureTask
 * Future模式是多线程开发中常见的设计模式，核心思想是：异步调用
 * Future是接口，FutureTask是具体实现类
+* 客户端向服务器发送数据请求，服务器先返回代理数据，再启动新的线程加载真实数据，传递给代理对象
 * 用法
 ```
 Future<HashMap> future = getDataFromRemote();
-2 //do something
+//do something
 HashMap data = future.get();
 ```
 
