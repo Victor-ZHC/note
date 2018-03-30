@@ -1,4 +1,4 @@
-# HashMap源码
+# String源码
 
 ### 类声明
 * 实现CharSequence、Comparable、Serializable接口
@@ -84,7 +84,7 @@ public boolean equals(Object anObject) {
 }
 ```
 * 对于字符串而言
-    * ==比较两个对象在内存中的额首地址
+    * ==比较两个对象在内存中的首地址
     * equals()比较字符串中所包含内容是否相等
 
 ### contentEquals函数
