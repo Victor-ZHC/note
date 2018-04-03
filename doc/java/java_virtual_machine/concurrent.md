@@ -10,8 +10,7 @@
 1. CAS操作
 * 比较并交换，Compare-and-Swap，可以通过一条处理器指令完成
 * java.util.concurrent.atomic包下的原子类型变量，如：AtomicInteger，使用了底层的JVM支持，为数字类型提供CAS操作
-* CAS操作会出现ABA问题，解决：不只更新引用值，而是更新引用+版本号，即使出现ABA，版本号也不
-同
+* CAS操作会出现ABA问题，解决：不只更新引用值，而是更新引用+版本号，即使出现ABA，版本号也不同
 
 ### 悲观锁应用
 * 互斥同步（Mutual Exclusion & Synchronization），悲观的并发策略
@@ -35,6 +34,7 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
 * 信号量Semaphore
     * 信号量是对锁的扩展，sychronized和重入锁ReentrantLock一次只允许一个线程访问一个资源，信号量可以指定多个线程同时访问一个资源
     * 信号量可以用于做**流量控制**，控制最大并发量
+    * 信号量可以控制程序逻辑：singal(S), wait(S)
     * 实现与ReentrantLock一样，依靠继承自AbstractQueuedSynchronizer的Sync实现主要功能，只是调用共享模式的：tryAcquireShared()方法
 
 * 注：多线程同步：1）sychronized；2）wait()和notify()；3）Lock；
