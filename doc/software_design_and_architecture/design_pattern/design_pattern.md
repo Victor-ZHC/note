@@ -79,4 +79,15 @@
 * Command Pattern，有代码
 * 如：undo、redo
 
+## Future和FutureTask
+* Future模式是多线程开发中常见的设计模式，核心思想是：异步调用
+* Future是接口，FutureTask是具体实现类
+* 客户端向服务器发送数据请求，服务器先返回代理数据，再启动新的线程加载真实数据，传递给代理对象
+* 用法
+```
+Future<HashMap> future = getDataFromRemote();
+//do something
+HashMap data = future.get();
+```
+
 [返回目录](../CONTENTS.md)
