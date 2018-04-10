@@ -28,4 +28,4 @@
    上k 下j 左h 右l
 8. Linux下复制一行yy  删除当前字符x
 
-[返回目录](../CONTENTS.md)
+[返回目录](../../CONTENTS.md)

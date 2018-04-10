@@ -108,4 +108,4 @@ interface Demo {
     * 法三：最小/大堆法，将k个数建堆，依次将后来的数字插入，然后剩余的堆就是Top-K  
     * 更多思路见[10亿个数中找出最大的10000个数（top K问题）](http://blog.csdn.net/zyq522376829/article/details/47686867)
 
-[返回目录](../CONTENTS.md)
+[返回目录](../../CONTENTS.md)

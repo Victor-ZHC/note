@@ -35,4 +35,4 @@
     * 确保变量的更新通知到其他线程
     * 但是访问volatile变量不会执行加锁操作，因此线程不会阻塞，volatile变量是一种比synchronized关键字更轻量级的同步
 
-[返回目录](../CONTENTS.md)
+[返回目录](../../CONTENTS.md)

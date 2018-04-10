@@ -22,4 +22,4 @@ public class Activity implements Comparable<Activity> {
 Collections.sort(activityList);
 ```
 
-[返回目录](../CONTENTS.md)
+[返回目录](../../CONTENTS.md)

@@ -23,4 +23,4 @@ public int maxSumNoLargerThan1(int[] array, int k){
 * 最终：取两种情况的最大值
 
 
-[返回目录](../CONTENTS.md)
+[返回目录](../../CONTENTS.md)

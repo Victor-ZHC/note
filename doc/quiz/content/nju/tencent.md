@@ -29,4 +29,4 @@ public static int sort(int[] array,int a,int lo,int hi){
 5. Set和Vector的使用
 * 参考[Collection集合类](../../java/java_basics/collection.md)
 
-[返回目录](../CONTENTS.md)
+[返回目录](../../CONTENTS.md)
