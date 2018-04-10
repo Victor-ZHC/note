@@ -10,6 +10,7 @@
 - [guotaijunan](content/guotaijunan.md)
 - [pinduoduo](content/pinduoduo.md)
 - [xinghuan](content/xinghuan.md)
+- [jingdong](content/jingdong.md)
 
 ## Learn
 - [web](learn/web.md)

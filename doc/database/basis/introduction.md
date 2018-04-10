@@ -20,7 +20,7 @@
     3. Partition Tolerance，分区容错性（分布式系统中，单个或多个节点宕机，系统仍然可以运作）
     * 关系型数据库满足CA
     * 大部分非关系型数据库满足AP，牺牲了部分一致性，只需满足BASE模型中的一部分
-        * Basically Avaliable基本可用
+        * Basically Available基本可用
         * Soft state软状态（状态可以有一段时间不同步）
         * Eventually consistency最终一致
 
