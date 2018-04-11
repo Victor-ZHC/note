@@ -36,27 +36,44 @@
 * 构造函数创建对象调用，无返回类型
 * 析构函数，删除对象时执行，无返回值无参数，主要：释放资源
 
-9. 进程与线程的区别
-* 进程：资源分配与保护的基本单位allocate and protect system resources；
-* 线程：系统调度和分派的基本单位；schedule and dispatch system；
-
-10. Object和String类的方法
+9. Object和String类的方法
 * Object：toString、equals、notify、notifyAll、wait、clone、hashCode、getClass、finalize
 * String: charAt、compareTo、concat、endsWith、indexOf、length、replace、split、subString、toCharArray、trim
 
-11. 等价类（Equivalence Class）
+10. 等价类（Equivalence Class）
 * 自反性(reflexivity)、对称性（symmetry）、传递性(transitivity)
 
-12. Java重写(override）和重载（overload）
+11. Java重写(override）和重载（overload）
 * 重写：子类继承父类，重写方法
 * 重载：一个类中，方法名相同，参数不同
+
+12. 进程与线程的区别
+* 进程：资源分配与保护的基本单位allocate and protect system resources；
+* 线程：系统调度和分派的基本单位；schedule and dispatch system；
 
 13. 类和对象
 * 对象是类的实例，类是对象的模板，对象在堆中，类在方法区
 
-14. 非聚集索引non-clustered index
-15. 范式paradigm
-16. 问题：
+14. 非聚集索引 Non-clustered Index
+
+15. 范式 Paradigm
+
+16. 死锁 Deadlock
+* 产生的条件
+    * 互斥条件
+    * 请求和保持条件
+    * 不可抢占条件
+    * 循环等待条件
+* 避免死锁
+    * 银行家算法(Banker's Algorithm)
+        * 当满足：1)request<=max; 2)request<=avaliable，资源才会被分配
+
+17. HashMap是无序的，要实现有序怎么办
+* LinkedHashMap（维护额外的双向链表保证迭代的顺序）
+* TreeMap
+![](../img/collection.png)
+
+18. 问题：
 * What will the interns do in the internship?
 * Is there any chance for an intern to become a formal employee if he interns In Morgan in summer vacation?
 
