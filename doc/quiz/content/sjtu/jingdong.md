@@ -11,6 +11,6 @@
 * 不是用来解决共享变量或者线程同步的
 * [参考链接](http://www.cnblogs.com/zhengbin/p/5674638.html)
 * 使用
-![](./img/threadlocal.png)
+![](../img/threadlocal.png)
 
 [返回目录](../../CONTENTS.md)

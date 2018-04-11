@@ -9,14 +9,17 @@
 
 ## Content-SJTU
 - [alibaba](content/sjtu/alibaba.md)
-- [intel](content/sjtu/intel.md)
 - [tencent](content/sjtu/tencent.md)
-- [iqiyi](content/sjtu/iqiyi.md)
+- [intel](content/sjtu/intel.md)
 - [jingdong](content/sjtu/jingdong.md)
+- [iqiyi](content/sjtu/iqiyi.md)
 - [pinduoduo](content/sjtu/pinduoduo.md)
+- [ele](content/sjtu/ele.md)
+- [morgan](content/sjtu/morgan.md)
 - [xinghuan](content/sjtu/xinghuan.md)
 
 ## Learn
+- [course](learn/course.md)
 - [web](learn/web.md)
 - [distribution](learn/distribution.md)
 - [review](learn/review.md)
