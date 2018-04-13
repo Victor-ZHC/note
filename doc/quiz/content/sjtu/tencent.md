@@ -189,6 +189,7 @@
 ArrayList 数组-查找方便
 LinkedList 双向链表-插入删除方便
 Vector
+Stack
 HashMap
 Hashtable
 ConcurrentHashMap
