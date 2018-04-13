@@ -4,7 +4,7 @@
 * notifyAll()唤醒所有
 2. 线程wait和sleep的区别
 * sleep()是Thread类的方法，而wait()是Object类的方法
-* 调用sleep()，线程不会释放对象锁
+* 调用sleep()，线程不会释放对象锁
 * 调用wait()，线程放弃对象锁，只有调用notify()后，才唤醒
 3. Session
 * 创建：
