@@ -23,7 +23,7 @@
 * 不能，理由：
     * volatile仅保证从主内存加载到工作内存的值是最新的，但加载操作不是原子的
 * 因此，线程计数器要用compareAndSet保证原子性
-3. 线程池构造器中的参数
+3. 线程池ThreadPoolExecutor构造器中的参数
 * corePoolSize：核心线程池的大小，默认情况下，线程池中的线程数为0，当有任务来之后，就会创建一个线程去执行任务，当线程池中的线程数目达到corePoolSize后，就会把到达的任务放到缓存队列当中；
 * maximumPoolSize：线程池最大线程数
 * keepAliveTime：表示线程没有任务执行时最多保持多久时间会终止。默认情况下，只有当线程池中的线程数大于corePoolSize时，keepAliveTime才会起作用，直到线程池中的线程数不大于corePoolSize
@@ -68,5 +68,28 @@ explain SELECT * FROM instructor;
 * Collection是集合接口，提供集合的基本操作：add、remove、equals、size
 * Collections是集合类型的工具类，提供一系列静态方法，如：sort、binarySearch、线程安全操作
 10. java1.8新特性
+
+## 复试
+1. 快排的空间复杂度
+* O(logn)
+2. Prime算法
+* 贪心算法
+* 证明，该局部最优算法就是全局最优
+```
+反证法：假设prim生成的不是最小生成树
+1). 设prim生成的树为G0
+2). 假设存在Gmin使得cost(Gmin)<cost(G0)   则在Gmin中存在<u,v>不属于G0
+3). 将<u,v>加入G0中可得一个环，且<u,v>不是该环的最长边(这是因为<u,v>∈Gmin)
+4). 这与prim每次生成最短边矛盾
+5). 故假设不成立，命题得证.
+```
+3. 程序计数器
+* 当前线程所执行的字节码的行号指示器
+4. GC Roots
+5. Java泛型中的通配符
+```
+使用 List<? extends C> list，表示list可以引用一个ArrayList(或者其它List的子类)的对象，这个对象包含的元素类型是C的子类型(包含C本身)的一种。
+使用 List<? super C> list，表示list可以引用一个ArrayList(或者其它List的子类)的对象，这个对象包含的元素就类型是C的超类型(包含C本身)的一种。
+```
 
 [返回目录](../../CONTENTS.md)
