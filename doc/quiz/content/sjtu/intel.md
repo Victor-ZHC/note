@@ -63,7 +63,7 @@ interface Demo {
         * synchronized实现：monitorenter和monitorexit
 * HashMap（线程不安全）、HashSet（线程不安全）、HashTable & SysnchronizedMap（线程安全）、ConcurrentHashMap（线程安全）
     * HashTable & SysnchronizedMap所有方法都同步synchronized了，但效率低
-    * ConcurrentHashMap的分段锁称为Segment，ConcurrentHashMap采用了分段锁的设计，只有在同一个分段内才存在竞态关系，不同的分段锁之间没有锁竞争。
+    * ConcurrentHashMap的分段锁称为Segment，ConcurrentHashMap采用了分段锁的设计，只有在同一个分段内才存在竞争关系，不同的分段锁之间没有锁竞争。
     * ConcurrentHashMap基于concurrencyLevel划分出多个Segment对key-value进行存储，避免每次put操作都得锁住整个数组。默认情况下，可允许16个线程并发无阻塞的操作集合对象。
 * TreeSet：基于TreeMap（线程不安全）、TreeMap：基于红黑树-自平衡二叉查找树（线程不安全）
 5. JVM垃圾回收机制
@@ -76,12 +76,12 @@ interface Demo {
 
 ## Deep Learning面试
 1. Java内部类和外部类
-* 内部类可以获取外部类的private属性，外部类可以访问内部类的private属性，真正执行是编译器的`acess$0`, `access$1`等
+* 内部类可以获取外部类的private属性，外部类可以访问内部类的private属性，真正执行是编译器的`access$0`, `access$1`等
 2. 设计模式
 * 单例模式
     * 私有构造函数
     * 有static私有对象
-    * 有static共有getInstance方法(创建或获取实例)
+    * 有static公有getInstance方法(创建或获取实例)
 3. Servlet
 * 继承HttpServlet，重写doGet()和doPost()方法
 * 生命周期

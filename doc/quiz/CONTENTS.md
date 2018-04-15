@@ -13,6 +13,7 @@
 - [intel](content/sjtu/intel.md)
 - [jingdong](content/sjtu/jingdong.md)
 - [iqiyi](content/sjtu/iqiyi.md)
+- [meituan](content/sjtu/meituan.md)
 - [pinduoduo](content/sjtu/pinduoduo.md)
 - [ele](content/sjtu/ele.md)
 - [morgan](content/sjtu/morgan.md)
