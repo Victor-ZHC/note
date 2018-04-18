@@ -18,6 +18,7 @@
 - [ele](content/sjtu/ele.md)
 - [morgan](content/sjtu/morgan.md)
 - [xinghuan](content/sjtu/xinghuan.md)
+- [zhaohang](content/sjtu/zhaohang.md)
 
 ## Learn
 - [course](learn/course.md)
