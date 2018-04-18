@@ -17,14 +17,14 @@
 
 ## ThreadPoolExecutor线程池类
 * 关键构造函数参数
-    * corePoolSize：核心线程池的大小，默认情况下，线程池中的线程数为0，当有任务来之后，就会创建一个线程去执行任务，当线程池中的线程数目达到corePoolSize后，就会把到达的任务放到缓存队列当中；
+    * corePoolSize：核心线程池的大小，默认情况下，线程池中的线程数为0，当有任务来之后，就会创建一个线程去执行任务，当线程池中的线程数目达到corePoolSize后，就会把到达的任务放到阻塞队列当中
     * maximumPoolSize：线程池最大线程数
     * keepAliveTime：表示线程没有任务执行时最多保持多久时间会终止。默认情况下，只有当线程池中的线程数大于corePoolSize时，keepAliveTime才会起作用，直到线程池中的线程数不大于corePoolSize
     * unit：参数keepAliveTime的时间单位
     * workQueue：阻塞队列，用来存储等待执行的任务
 * 关键数据结构
     * `HashSet<Worker> workers`：一个worker对应一个线程，线程池通过workers包含多个线程
-    * `BlockingQueue<Runnable> workQueue`：当线程池中的线程数超过容量，任务提交后，进入阻塞队列
+    * `BlockingQueue<Runnable> workQueue`：当线程池中的待处理任务数数超过容量，任务提交后，进入阻塞队列，等待worker线程
 * 关键方法
     * execute()：核心方法，向线程池提交一个任务，并执行
     ```
@@ -43,7 +43,7 @@
         if (isRunning(c) && workQueue.offer(command)) {
             int recheck = ctl.get();
             // 下面：为防止将任务添加进任务缓存队列时，其他线程调用shutdown或shutdownNow关闭线程池
-            if (! isRunning(recheck) && remove(command))
+            if (!isRunning(recheck) && remove(command))
                 reject(command);
             else if (workerCountOf(recheck) == 0)
                 addWorker(null, false);
