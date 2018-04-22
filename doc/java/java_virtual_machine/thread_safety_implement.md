@@ -53,7 +53,7 @@ http://www.cnblogs.com/zhengbin/p/6503412.html
     * 但ReentrantLock增加的3个功能
         1. 等待可中断：持有锁的线程长期不释放锁，等待锁的线程可放弃等待
         2. 可实现公平锁：公平锁指：多个线程等待同一个锁时，必须按照申请的顺序依次获得锁（默认是：非公平锁）
-        3. 锁绑定多个条件：一个ReentrantLock对象可以同时绑定多个Condition对象（多次调用newCondition()方法），而synchronized只能一个
+        3. 锁绑定多个条件：一个ReentrantLock对象可以同时绑定多个Condition对象（多次调用newCondition()方法），而synchronized只能一个（条件：等待某个条件满足前，一直挂起该线程）
     * 关键：1）volatile修饰state，判断是否有加锁；2）AQS同步器实现锁的获取与释放；
     * TryAcquire()方法：如果锁state为0则尝试获取锁，否则：识别获取锁的线程是否为当前占据锁的线程，如果是再次成功获取
    
