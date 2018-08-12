@@ -68,7 +68,7 @@ interface Iterator<E>{
 * 删除元素和在某位置插入元素代价很小
 * Java中一般是双向链表
 * 在尾部插入元素依靠链表的add方法
-* 在中间插入元素依靠Iteator的add方法
+* 在中间插入元素依靠Iterator的add方法
 * LinkedList采用双向链表实现
 ### 2. 数组列表
 * 适合使用get和set方式随机访问元素
@@ -77,7 +77,7 @@ interface Iterator<E>{
 * Stack继承于Vector，实现LIFO，是同步的
 ### 3. 散列集
 * HashMap，线程不安全，参考[HashMap](../java_source/hash_map.md)
-* HashSet是基于HashMap实现的，线程不安全，不接受重复对象，不支持get(int)获取指定位置元素
+* HashSet是基于HashMap实现的，线程不安全，不接受重复对象，不支持get(int)获取指定位置元素
 * 散列表（Hashtable）由链表数组实现，每个链表是被称为一个桶（bucket），线程安全
 * ConcurrentHashMap采用了分段锁的设计，只有在同一个分段内才存在竞态关系，不同的分段锁之间没有锁竞争。默认情况下，可允许16个线程并发无阻塞的操作集合对象。
 ### 4. 树集

@@ -124,7 +124,7 @@ final Node<K,V>[] resize() {
     Node<K,V>[] newTab = (Node<K,V>[])new Node[newCap];
     table = newTab;
     if (oldTab != null) {
-        // 便利原表
+        // 遍历原表
         for (int j = 0; j < oldCap; ++j) {
             Node<K,V> e;
             if ((e = oldTab[j]) != null) {

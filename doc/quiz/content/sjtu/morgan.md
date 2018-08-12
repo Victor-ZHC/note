@@ -5,7 +5,7 @@
 * UDP用户数据报协议：无连接（Connectionless）、不可靠（unreliable）、面向报文的（Datagram Oriented）、支持一对一一对多多对多通信
 
 2. Stack/Queue
-* Stack：FILO, push, pop, peek
+* Stack：LIFO, push, pop, peek
 * Queue：FIFO, 使用offer和poll优于add和remove之处在于它们返回值可以判断成功与否，不抛出异常
 
 3. QuickSort
@@ -37,7 +37,7 @@
 * 析构函数，删除对象时执行，无返回值无参数，主要：释放资源
 
 9. Object和String类的方法
-* Object：toString、equals、notify、notifyAll、wait、clone、hashCode、getClass、finalize
+* Object: toString、equals、notify、notifyAll、wait、clone、hashCode、getClass、finalize
 * String: charAt、compareTo、concat、endsWith、indexOf、length、replace、split、subString、toCharArray、trim
 
 10. 等价类（Equivalence Class）
@@ -48,8 +48,8 @@
 * 重载：一个类中，方法名相同，参数不同
 
 12. 进程与线程的区别
-* 进程：资源分配与保护的基本单位allocate and protect system resources；
-* 线程：系统调度和分派的基本单位；schedule and dispatch system；
+* 进程：资源分配与保护的基本单位 allocate and protect system resources；
+* 线程：系统调度和分派的基本单位 schedule and dispatch system；
 
 13. 类和对象
 * 对象是类的实例，类是对象的模板，对象在堆中，类在方法区
@@ -69,7 +69,7 @@
         * 当满足：1)request<=max; 2)request<=avaliable，资源才会被分配
 
 17. HashMap是无序的，要实现有序怎么办
-* LinkedHashMap（维护额外的双向链表保证迭代的顺序）
+* LinkedHashMap（维护额外的双向链表保证迭代的顺序）
 * TreeMap
 ![](../img/collection.png)
 

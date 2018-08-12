@@ -1,11 +1,13 @@
 # note
 ## 目录
 - [Java](./doc/java/CONTENTS.md) 
-- [NodeJS](./doc/nodejs/CONTENTS.md)  
+- [NodeJS](./doc/nodejs/CONTENTS.md)
+- [C++](./doc/cpp/CONTENTS.md)
 - [机器学习](./doc/machine_learning/CONTENTS.md)
 - [并行与分布式](./doc/distributed/CONTENTS.md)
 - [计算机网络](./doc/computer_network/CONTENTS.md)
 - [操作系统](./doc/operating_system/CONTENTS.md)  
+- [数据库](./doc/database/CONTENTS.md)
 - [软件设计与体系结构](./doc/software_design/CONTENTS.md)  
 - [数据结构与算法](./doc/data_structure_and_algorithm/CONTENTS.md)  
 - [面试题](./doc/quiz/CONTENTS.md)  

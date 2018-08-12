@@ -36,3 +36,5 @@ public void deleteApi(@RequestParam("id") int id){ }
 * @Colum：如果字段名与列名相同，可省略
 * @Id：主键
 * application.properties中设置属性值
+
+[返回目录](../CONTENTS.md)

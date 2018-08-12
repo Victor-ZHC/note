@@ -62,9 +62,9 @@ interface Demo {
     * Vector所有方法都同步synchronized了
         * synchronized实现：monitorenter和monitorexit
 * HashMap（线程不安全）、HashSet（线程不安全）、HashTable & SysnchronizedMap（线程安全）、ConcurrentHashMap（线程安全）
-    * HashTable & SysnchronizedMap所有方法都同步synchronized了，但效率低
+    * HashTable & SynchronizedMap所有方法都同步synchronized了，但效率低
     * ConcurrentHashMap的分段锁称为Segment，ConcurrentHashMap采用了分段锁的设计，只有在同一个分段内才存在竞争关系，不同的分段锁之间没有锁竞争。
-    * ConcurrentHashMap基于concurrencyLevel划分出多个Segment对key-value进行存储，避免每次put操作都得锁住整个数组。默认情况下，可允许16个线程并发无阻塞的操作集合对象。
+    * ConcurrentHashMap基于concurrencyLevel划分出多个Segment对key-value进行存储，避免每次put操作都得锁住整个数组。默认情况下，可允许16个线程并发无阻塞的操作集合对象。
 * TreeSet：基于TreeMap（线程不安全）、TreeMap：基于红黑树-自平衡二叉查找树（线程不安全）
 5. JVM垃圾回收机制
 * 引用计数，若引用为0，则回收
@@ -72,7 +72,7 @@ interface Demo {
 * Class文件的生命周期：加载（Loading）、验证（Verification）、准备（Preparation）、解析（Resolution）、初始化（Initialization）、使用（Using）、卸载（Unloading）
 7. 同步和互斥
 * 互斥是某一资源仅允许一个访问者访问，排他性
-* 同步是在互斥的基础上，通过其他机制实现访问者对资源的有序访问
+* 同步是在互斥的基础上，通过其他机制实现访问者对资源的有序访问
 
 ## Deep Learning面试
 1. Java内部类和外部类

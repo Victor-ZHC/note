@@ -45,7 +45,7 @@
 
 ## 两类因特网路由选择协议
 * 内部网关协议IGP（Interior Gateway Protocol）
-    * 自治系统内部使用的路由选择协议，如：RIP（Routing Information Protocol路由信息协议）和OSPF（Open Shortest Path First开放式最短路径有限）
+    * 自治系统内部使用的路由选择协议，如：RIP（Routing Information Protocol路由信息协议）和OSPF（Open Shortest Path First开放式最短路径优先）
     * RIP：分布式的基于距离向量的路由选择协议，距离即“跳数”，最大优点：简单
         * 协议特点：
             1. 仅和相邻路由器交换信息；

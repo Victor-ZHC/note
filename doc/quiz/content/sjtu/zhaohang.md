@@ -10,3 +10,5 @@
     * 判定覆盖（把Decision判定的True和False各执行一次）
     * 条件覆盖（把每一个条件的True和False各执行一次）
         * A XOR B, (A=T,B=T) (A=F,B=F), 满足条件覆盖但不满足判定覆盖
+
+[返回目录](../../CONTENTS.md)
