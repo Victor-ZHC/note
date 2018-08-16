@@ -28,9 +28,9 @@ for(int i=0;i<a.length;i++) {
 * MySQL的多版本并发控制技术（MVCC）--解决幻读，和行级锁关联使用
 3. MongoDB如何保证CAP
    * 要保证C：最终一致
-   * 要保证A：节点在响应请求时，不完全考虑整个集群的数据是否一致
+   * 要保证A：节点在响应请求时，不完全考虑整个集群的数据是否一致
    * P：集群中的某些节点在无法联系后，集群整体是否还能继续工作
-   * 另：MongoDB的隔离级别为：读已提交
+   * 另：MongoDB的隔离级别为：读已提交
 4. synchronize加在普通方法和static方法上的区别
 ```
 synchronized void method1() {
@@ -137,7 +137,7 @@ public void binaryToDecimal4(int n) {
     System.out.println(result);
 }
 ```
-13. java反射机制
+13. java反射机制
 14. MySQL和MongoDB的区别
 15. 轻量级锁、重量级锁和偏向锁
 16. java类加载过程
