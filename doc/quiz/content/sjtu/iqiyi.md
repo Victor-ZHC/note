@@ -104,7 +104,7 @@ BufferedReader in = new BufferedReader( new FileReader ( fileName ) );
 ```
 思路1：
 输入一个十进制数n，每次用n除以2，把余数记下来，再用商去除以2...依次循环，直到商为0结束，把余数倒着依次排列，就构成了转换后的二进制数。
-public int binaryToDecimal1(int n) {
+public int decimalToBinary1(int n) {
     int t = 0;  //用来记录位数
     int bin = 0; //用来记录最后的二进制数
     int r;  //用来存储余数
@@ -117,7 +117,7 @@ public int binaryToDecimal1(int n) {
     return bin;
 }
 或者
-public String binaryToDecimal2(int n) {
+public String decimalToBinary2(int n) {
     String str = "";
     while (n != 0) {
         str = n % 2 + str;
@@ -127,13 +127,13 @@ public String binaryToDecimal2(int n) {
 }
 思路2：
 移位操作(结果中会有多余的0)
-public void binaryToDecimal3(int n) {
+public void decimalToBinary3(int n) {
     for (int i = 31; i >= 0; i--)
         System.out.print(n >>> i & 1);
 }
 思路3：
 调用API
-public void binaryToDecimal4(int n) {
+public void decimalToBinary4(int n) {
     String result = Integer.toBinaryString(n);
     System.out.println(result);
 }
@@ -153,7 +153,7 @@ public void binaryToDecimal4(int n) {
 2. zookeeper选主流程采用什么协议，具体与paxos协议有什么不同：[Zookeeper与Paxos](https://www.cnblogs.com/leesf456/p/6012777.html)
 * Zookeeper使用了Zookeeper Atomic Broadcast（ZAB，Zookeeper原子消息广播协议）协议作为其数据一致性的核心算法
 * Zookeeper引入了Leader、Follower、Observer三种角色，Leader服务器为客户端提供写服务，Follower和Observer提供读服务
-* 与Paxos区别
+* 与Paxos区别（[参见](../../../distributed/consistency/paxos.md)）
     * Paxos算法中，新选举产生的主进程会进行两个阶段的工作，第一阶段称为读阶段，新的主进程和其他进程通信来收集主进程提出的提议，并将它们提交。第二阶段称为写阶段，当前主进程开始提出自己的提议。
     * ZAB协议在Paxos基础上添加了同步阶段，此时，新的Leader会确保存在过半的Follower已经提交了之前的Leader周期中的所有事务Proposal。
 3. JVM参数
