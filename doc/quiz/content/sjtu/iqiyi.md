@@ -150,7 +150,7 @@ public void binaryToDecimal4(int n) {
     * Namenode：HDFS的守护进程，用来记录文件是如何分割成数据块，以及数据块分别被存储到那些数据节点上
     * Datanode：文件系统的工作节点，定期向namenode发送他们所存储的块的列表
     * Secondary Namenode：辅助后台程序，与NameNode进行通信，以便定期保存HDFS元数据的快照
-2. zookeeper选主流程采用什么协议，具体与paxos协议有什么不同：[Zookeeper与Paxos](https://www.cnblogs.com/leesf456/p/6012777.html)
+2. zookeeper选主流程采用什么协议，具体与paxos协议有什么不同：[Zookeeper与Paxos](https://www.cnblogs.com/leesf456/p/6012777.html)
 * Zookeeper使用了Zookeeper Atomic Broadcast（ZAB，Zookeeper原子消息广播协议）协议作为其数据一致性的核心算法
 * Zookeeper引入了Leader、Follower、Observer三种角色，Leader服务器为客户端提供写服务，Follower和Observer提供读服务
 * 与Paxos区别
