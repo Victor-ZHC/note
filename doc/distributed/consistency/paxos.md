@@ -13,3 +13,5 @@
     2. 阶段 2：
         * a） Proposer：如果收到多数acceptor对 prepare请求（编号为 n）的回应，则向这些 acceptor发送议案{n,v}的accept请求，v是所有回应中编号最高的议案的决议，或如果回应中没有议案，则是proposer选择的值； 
         * b）Acceptor：如果收到了议案{n,v}的accept请求，就批准该议案；
+
+[返回目录](../CONTENTS.md)
