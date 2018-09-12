@@ -13,7 +13,8 @@ HDFS 中的 block 是分布式存储的最小单元，类似于盛放文件的�
 spark中的partition是RDD的最小单元，RDD是由分布在各个节点上的 partition 组成的。partition 是指的spark在计算过程中，生成的数据在计算空间内最小单元，同一份数据（RDD）的 partition 大小不一，数量不定，是根据application里的算子和最初读入的数据分块数量决定的，这也是为什么叫“弹性分布式”数据集的原因之一。
 
 **总结：**
-||block|partition|
+
+| |block|partition|
 |----|:----:|:----:|
 |概念空间|存储空间|计算空间|
 |大小|固定|不固定|
@@ -51,6 +52,7 @@ Partitioner决定RDD的分区方式。
     1. HashPartitioner：Hash是以key作为分区条件的散列分布，分区数据不连续，极端情况也可能散列到少数几个分区上，导致数据不均等
     2. RangePartitioner：Range按Key的排序平衡分布，分区内数据连续，大小也相对均等。
 - 非Key-Value类型：分区为None。
+
 详情请见[Spark分区](./partitioner.md)
 
 ### Checkpoint
