@@ -1,7 +1,8 @@
 # 大数据
 ## 目录
 ### Spark
-- [RDD](spark/resilient_distributed_datasets.md)
+- [RDD](./spark/resilient_distributed_datasets.md)
+- [Dependency](./spark/dependency.md)
 ### Hadoop
 - [Shuffle](hadoop/data_link_layer.md)
 ### HDFS

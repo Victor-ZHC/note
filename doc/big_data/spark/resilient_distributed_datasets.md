@@ -44,7 +44,7 @@ SparkContext为Spark job的入口，由Spark driver创建在client端，包括�
 - 日志配置：可以通过log4j.properties配置
 
 ### Dependencies
-详情请见[Spark依赖](./dependencies.md)
+详情请见[Spark依赖](./dependency.md)
 
 ### Partitioner
 Partitioner决定RDD的分区方式。 
