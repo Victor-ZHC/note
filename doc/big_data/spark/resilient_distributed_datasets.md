@@ -53,7 +53,7 @@ Partitioner决定RDD的分区方式。
     2. RangePartitioner：Range按Key的排序平衡分布，分区内数据连续，大小也相对均等。
 - 非Key-Value类型：分区为None。
 
-详情请见[Spark分区](./partitioner.md)
+详情请见[Spark分区](./partition.md)
 
 ### Checkpoint
 Checkpoint是Spark提供的一种缓存机制，当需要计算的RDD过多时，为了避免重新计算之前的RDD，可以对RDD做Checkpoint处理，检查RDD是否被物化或计算，并将结果持久化到磁盘或HDFS。(容错的一种优化) 
