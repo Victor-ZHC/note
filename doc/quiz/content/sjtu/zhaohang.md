@@ -46,7 +46,6 @@ and emp.Salary=(SELECT max(Salary) FROM Employee e2 WHERE e2.DepartmentId=dep.Id
     <name>dfs.replication</name>
     <value>3</value>
 </property>
-
 ```
 
 [返回目录](../../CONTENTS.md)
