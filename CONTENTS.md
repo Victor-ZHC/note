@@ -5,6 +5,7 @@
 - [C++](./doc/cpp/CONTENTS.md)
 - [机器学习](./doc/machine_learning/CONTENTS.md)
 - [并行与分布式](./doc/distributed/CONTENTS.md)
+- [大数据](./doc/big_data/CONTENTS.md)
 - [计算机网络](./doc/computer_network/CONTENTS.md)
 - [操作系统](./doc/operating_system/CONTENTS.md)  
 - [数据库](./doc/database/CONTENTS.md)
