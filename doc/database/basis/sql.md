@@ -113,4 +113,11 @@ end;
 * 要求两个表格有相同数目的列，并且有相似的数据类型
 * Union是去重合并，Union All不去重
 
+## truncate
+* truncate table tablename（清空数据库表）
+* truncate与delete的区别：
+    * truncate能够快速清空一个表，delete只能一行一行删除
+    * truncate清空表时，会重置auto_increment为1，而delete后仍保持auto_increment
+    * delete是数据库操作语言(dml)，允许rollback，而truncate是数据库定义语言(ddl)，不能rollback
+
 [返回目录](../CONTENTS.md)
