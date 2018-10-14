@@ -17,6 +17,7 @@
 - [pinduoduo](content/sjtu/pinduoduo.md)
 - [ele](content/sjtu/ele.md)
 - [wangyi](content/sjtu/wangyi.md)
+- [baidu](content/sjtu/baidu.md)
 - [morgan](content/sjtu/morgan.md)
 - [xinghuan](content/sjtu/xinghuan.md)
 - [zhaohang](content/sjtu/zhaohang.md)
