@@ -50,7 +50,7 @@ and emp.Salary=(SELECT max(Salary) FROM Employee e2 WHERE e2.DepartmentId=dep.Id
 
 ## 面试
 1. HTTP和socket的区别
-* HTTP1.0默认使用短连接，HTTP1.11起默认使用长连接；Socket为长连接，通常情况下，Socket连接就是TCP连接（狭义）
+* HTTP1.0默认使用短连接，HTTP1.11起默认使用长连接；Socket为长连接，通常情况下，Socket连接就是TCP连接（狭义）
 * Socket连接可以由服务器直接向客户端发送数据；HTTP连接服务器需要等客户端发送请求后将数据传送给客户端
 * 实际上，Socket可以支持不同的传输层协议（TCP或UDP）
 2. HTTPS握手保证安全
@@ -66,14 +66,14 @@ and emp.Salary=(SELECT max(Salary) FROM Employee e2 WHERE e2.DepartmentId=dep.Id
 8. 客户端解密信息
 ```
 3. zookeeper的CAP
-* 假设zookeeper有2n+1个server，同步过程中，leader向follower同步数据，当同步完成的数量大于n+1时，同步流程结束
+* 假设zookeeper有2n+1个server，同步过程中，leader向follower同步数据，当同步完成的数量大于n+1时，同步流程结束
 * C：zookeeper保证了最终一致性
 * A：zookeeper保证了可用性
 * P：分区容错
 * zookeeper的三个角色：Leader，Follower，Observer
     * Leader：整个集群的主节点，响应所有对zk状态变更的请求
     * Follower：响应本服务器上的读请求 & 处理Leader的提议
-    * Observer：不参加选举，不响应提议，目的：提高读取的吞吐量
+    * Observer：不参加选举，不响应提议，目的：提高读取的吞吐量
 4. OLTP和OLAP比较
 * OLTP：联机事务处理，OLAP联机分析处理
 ![](../img/olap.png)
@@ -90,9 +90,9 @@ and emp.Salary=(SELECT max(Salary) FROM Employee e2 WHERE e2.DepartmentId=dep.Id
 3. 不相交性：划分片段的数据无交集
 ```
 7. 索引原理
-* 非聚集索引和聚集索引：聚集索引可以查到需要查找的数据，非聚集索引可以查到记录对应的主键值，再将主键值通过聚集索引查到需要的数据
+* 非聚集索引和聚集索引：聚集索引可以查到需要查找的数据，非聚集索引可以查到记录对应的主键值，再将主键值通过聚集索引查到需要的数据
 * 索引通常实现使用B树或者B+树
-* 索引有代价：1）增加了数据库的存储空间；2）插入和修改数据时，索引也要更新
+* 索引有代价：1）增加了数据库的存储空间；2）插入和修改数据时，索引也要更新
 ![](../img/index.png)
 8. 数据仓库的四个特点
 * 面向主题的
