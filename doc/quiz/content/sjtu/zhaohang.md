@@ -62,7 +62,7 @@ and emp.Salary=(SELECT max(Salary) FROM Employee e2 WHERE e2.DepartmentId=dep.Id
 4. 客户端解析证书
 5. 传送加密信息
 6. 服务端解密信息
-7. 传输见加密后的信息
+7. 传输加密后的信息
 8. 客户端解密信息
 ```
 3. zookeeper的CAP
