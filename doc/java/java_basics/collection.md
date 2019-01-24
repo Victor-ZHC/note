@@ -31,7 +31,7 @@ interface Collection<E>{
     boolean isEmpty();
     // 如果集合中包含一个与obj相同的对象，返回true
     boolean contains(Object obj);
-    // 如果集合中包含与other集合的所有元素，返回true
+    // 如果集合中包含other集合的所有元素，返回true
     boolean containsAll(Collection<?> other);
     // 从集合中删除与obj相同的元素，如有对象被删除，返回true
     boolean remove(Object obj);
@@ -39,7 +39,7 @@ interface Collection<E>{
     boolean removeAll(Collection<?> other); 
     // 删除集合中的所有元素
     void clear();
-    // 从集合中删除所有与other集合中元素不同的元素，如改变了集合内容，返回true
+    // 从集合中删除所有与other集合中元素不同的元素，如改变了集合内容，返回true（相交）
     boolean retainAll(Collection<?> other);
     // 返回这个集合的对象数组
     Object[] toArray();

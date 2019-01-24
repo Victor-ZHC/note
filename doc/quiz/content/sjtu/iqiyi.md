@@ -91,7 +91,7 @@ public class Singleton{
 * HTTPS：是HTTP的安全版，HTTP下加入SSL(Secure Sockets Layer 安全套接层)，加密
 9. Restful机制
 * 架构核心规范与约束：统一接口
-* GET、POST、PUT、DELET
+* GET、POST、PUT、DELETE
 10. VUE和AngularJS
 * 都是双向绑定，但VUE更简洁
 11. 装饰者模式应用

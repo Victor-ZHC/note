@@ -248,7 +248,7 @@ final Node<K,V> getNode(int hash, Object key) {
         // 如果第一个实例命中，返回第一个
         if (first.hash == hash && ((k = first.key) == key || (key != null && key.equals(k))))
             return first;
-        // 依次便利后续
+        // 依次遍历后续
         if ((e = first.next) != null) {
             // 如果是红黑树，将节点变为TreeNode
             if (first instanceof TreeNode)

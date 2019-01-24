@@ -163,7 +163,7 @@
     一般采用发布/订阅模型
    消息有ACK确认机制，当Consumer处理完消息后，发送ACK给消息队列，消息队列删除消息
    应用：Kafka
-2. 信号量 semophore
+2. 信号量 semaphore
    是一个计数器，控制多个进程对共享资源的访问
 3. 管道 pipe
     https://blog.csdn.net/qq_33724710/article/details/52345509

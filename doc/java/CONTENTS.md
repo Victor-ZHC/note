@@ -2,7 +2,6 @@
 ## 目录
 ### Java基础
 - [Collection集合类](./java_basics/collection.md)
-- [Synchronized的用法](./java_basics/synchronized.md)  
 
 ### Java源码解读
 - [String](./java_source/string.md)
