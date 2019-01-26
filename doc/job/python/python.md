@@ -208,4 +208,73 @@ lst.sort(reverse=True)
 **update()**，利用一个字典更新另一个字典  
 **values()或itervalues()**，返回字典中的值
 
+## 条件、循环和其他语句
+* 如果导入的两个模块都有open函数，则使用：
+```
+>>> from module1 import open as open1
+>>> from module2 import open as open2
+```
+
+### 序列解包
+* 多个赋值操作同时进行，例：
+```
+>>> x, y, z = 1, 2, 3
+>>> print x, y, z
+1, 2, 3
+```
+* 常见应用：
+```
+>>> scoundrel = {'name': 'Robin', 'girlfriend': 'Marion'}
+>>> key, value = scoundrel.popitem()
+>>> key
+'girlfriend'
+>>> value
+'Marion'
+```
+
+### 条件和条件语句
+* **if, else, elif**子句  
+* 特殊比较运算符：is（是同一对象）、is not（不是同一对象）、in（是容器的成员）、not in（不是容器的成员）
+* 布尔运算符：**and, or**
+* 条件表达式：**a if b else c**
+* 迭代某范围的数字，函数**range(0, 10)**，结果为：[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+* 并行迭代，**zip**，函数将两个序列压缩在一起，然后返回一个元组的列表
+
+### 列表推导式，利用其它列表创建新列表：
+```
+>>> [x*x for x in range(10)]
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+## 抽象
+### 创建函数
+```
+def hello(name):
+    return 'Hello, ' + name + '!'
+```
+* 斐波那契数列函数：
+```
+def fibs(num)
+    result = [0, 1]
+    for i in range(num - 2):
+        result.append(result[-2] + result[-1])
+    return result
+```
+
+## 参数
+* python函数只能修改参数变量本身
+* 参数默认值
+```
+def hello(greeting='Hello', name='world'):
+    print '%s, %s!' % (greeting, name)
+打印： Hello, world!
+```
+* 收集参数：给函数提供任意多的参数，例：
+```
+def print_params(*params):
+    print params
+>>> print_params(1, 2, 3)
+(1, 2, 3)
+```
+
 [返回目录](../CONTENTS.md)
