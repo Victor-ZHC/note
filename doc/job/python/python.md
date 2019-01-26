@@ -164,10 +164,10 @@ lst.sort(reverse=True)
 >>> '/'.join(dirs)
 '/usr/bin/env'
 ```
-**lower()**，返回字符串的小写字母版：str.lower()
-**replace()**，替换字符串：str.replace('is', 'are')
-**split()**，将字符串分割成序列：str.split('/')
-**strip()**，去除两侧空格的字符串：str.strip()
+**lower()**，返回字符串的小写字母版：str.lower()  
+**replace()**，替换字符串：str.replace('is', 'are')  
+**split()**，将字符串分割成序列：str.split('/')  
+**strip()**，去除两侧空格的字符串：str.strip()  
 
 ## 字典-json
 ### dict函数
@@ -238,7 +238,7 @@ lst.sort(reverse=True)
 * 布尔运算符：**and, or**
 * 条件表达式：**a if b else c**
 * 迭代某范围的数字，函数**range(0, 10)**，结果为：[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-* 并行迭代，**zip**，函数将两个序列压缩在一起，然后返回一个元组的列表
+* 并行迭代，**zip**：函数将两个序列压缩在一起，然后返回一个元组的列表
 
 ### 列表推导式，利用其它列表创建新列表：
 ```
