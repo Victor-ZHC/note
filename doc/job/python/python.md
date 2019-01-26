@@ -46,7 +46,166 @@ sqrt(4)
 'h'
 ```
 * 分片
+```
+>>> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> numbers[7:10]
+[8, 9, 10]
+等价于：
+>>> numbers[-3:]
+```
+获取整个序列：
+```
+>>> numbers[:]
+```
+分片步长：
+```
+>>> numbers[0:10:2]
+[1, 3, 5, 7, 9]
+```
 * 加
-* 乘 
+加运算符连接序列：
+```
+>>> [1, 2, 3] + [4, 5, 6]
+[1, 2, 3, 4, 5, 6]
+```
+* 乘
+初始化一个长度为5的列表：
+```
+>>> sequence = [None] * 5
+>>> sequence
+[None, None, None, None, None]
+```
+* 成员资格
+检查用户名和PIN码：
+```
+database = [['victor', 1], ['seni', '4321']]
+if ['seni', '4321'] in database:
+    print('Success')
+```
+* 长度、最小值、最大值  
+**函数len(),min(),max()**返回序列中包含的元素数量、最小值和最大值
+
+### 列表-可变序列
+* 列表操作
+1. 删除元素，```del```语句：
+```
+>>> del database[1]
+```
+2. 分片赋值
+```
+>>> name = list['Perl']
+>>> name[1:] = list('ython')
+>>> name
+['P', 'y', 't', 'h', 'o', 'n']
+```
+分片语句可以插入新元素
+```
+>>> numbers = [1, 5]
+>>> numbers[1:1] = [2, 3, 4]
+>>> numbers
+[1, 2, 3, 4, 5]
+```
+分片语句可以删除新元素
+```
+>>> numbers
+[1, 2, 3, 4, 5]
+>>> numbers[1:4] = []
+>>> numbers
+[1, 5]
+```
+3. 列表方法  
+**append()**，在列表末尾追加新的对象：lst.append(4)  
+**count()**，统计某个元素在列表中出现的次数：lst.count(1)  
+**extend()**，在末尾一次性追加另一个序列中的多个值：lst1.extend(lst2)  
+**index()**，从列表中找出某个值第一个匹配项的索引位置：lst.index('who')  
+**insert()**，将对象插入列表中：lst.insert(3, 'four')  
+**pop()**，移除列表中的最后一个元素，并返回该元素的值：lst.pop()  
+**remove()**，移除列表中某个值的第一个匹配项：lst.remove('be')  
+**reverse()**，将列表中元素反向存放：x.reverse()  
+**sort()**，在原位置对列表进行排序：lst.sort()，sort方法提供的可选参数：cmp,key和reverse，例：
+```
+根据元素的长度进行排序，使用len作为键函数：
+>>> x = ['aardvark', 'abalone', 'acme', 'add', 'aerate']
+>>> x.sort(key=len)
+>>> x
+['add', 'acme', 'aerate', 'abalone', 'aardvark']
+```
+反向排序：
+```
+lst.sort(reverse=True)
+```
+
+### 元组-不可变序列
+1. 元组创建  
+用逗号分隔值，则创建
+```
+>>> 1, 2, 3
+(1, 2, 3)
+```
+2. tuple函数  
+以一个序列为参数，并把它转换为元组
+
+## 字符串  
+* 标准序列操作对字符串完全适用
+* 字符串不可变
+* 字符串格式化
+```
+模板字符串：
+>>> from string import Template
+>>> s = Template('$x, glorious $x!')
+>>> s.substitute(x='slurm')
+'slurm, glorious slurm!'
+```
+### 字符串方法
+**find()**，返回子串所在位置的最左端索引：str.find('Python')  
+**join()**，是split的逆方法，用来连接序列中的元素，例：
+```
+>>> dirs = '', 'usr', 'bin', 'env'
+>>> '/'.join(dirs)
+'/usr/bin/env'
+```
+**lower()**，返回字符串的小写字母版：str.lower()
+**replace()**，替换字符串：str.replace('is', 'are')
+**split()**，将字符串分割成序列：str.split('/')
+**strip()**，去除两侧空格的字符串：str.strip()
+
+## 字典-json
+### dict函数
+* 通过其他映射或者键值对序列建立字典，例：
+```
+>>> items = [('name', 'Gumby'), ('age', 42)]
+>>> d = dict(items)
+>>> d
+{'age': 42, 'name': 'Gumby'}
+```
+### 字典基本操作
+**len(d)**，返回d中键值对的数量  
+**d[k]**，返回关联到键k上的值  
+**d[k]=v**，将值v关联到键k上  
+**del d[k]**，删除键为k的项  
+**k in d**，检查d中是否含有键为k的项
+
+### 字典格式化
+* 可以在转换说明符%后面加上键，表示在()中，后面跟上其他说明元素，例：
+```
+>>> phonebook{'Beth': '9102', 'Alice': '2341', 'Ceil': '3258'}
+>>> "Ceil's phone number is %(Ceil)s." % phonebook
+"Ceil's phone number is 3258."
+```
+
+### 字典方法
+**clear()**，清除字典中的所有项：d.clear()
+**copy()**，浅拷贝
+**fromkeys()**，使用给定的键建立新的字典：
+```
+>>> {}.fromkeys(['name', 'age'])
+{'age': None, 'name': None}
+```
+**get()**，访问字典：d.get('name')  
+**has_key()**，检查字典中是否含有特定键：d.has_key(k)，相当于：k in d  
+**items()或iteritems()**，将字典的所有项以列表形式返回，列表中每一项表示为键值对，且iteritems()返回一个迭代器对象  
+**pop()**，获得给定键的值，并将相应键值对从字典中移除  
+**update()**，利用一个字典更新另一个字典  
+**values()或itervalues()**，返回字典中的值
 
 [返回目录](../CONTENTS.md)
