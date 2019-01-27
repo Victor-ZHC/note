@@ -277,4 +277,43 @@ def print_params(*params):
 (1, 2, 3)
 ```
 
+### 作用域
+* 函数**vars()**：可以返回变量和所对应值的映射的不可见字典，定义为命名空间或者作用域：
+```
+>>> x = 1
+>>> scope = vars()
+>>> scope['x']
+1
+```
+
+### 递归
+示例：
+```
+def power(x, n):
+    if n == 0:
+        return 1
+    else:
+        return x * power(x, n-1)
+```
+
+## 面向对象
+* 多态：一个方法的多种表现形式
+* 封装：向程序中的其他部分隐藏对象的具体实现细节
+* 继承
+
+### 类
+* 创建类
+```
+_metaclass_ = type
+class Person:
+    def setName(self, name):
+        self.name = name
+    def getName(self):
+        return self.name
+    def greet(self)
+        print "Hello, world! I'm %s." % self.name
+```
+
+### 
+
 [返回目录](../CONTENTS.md)
