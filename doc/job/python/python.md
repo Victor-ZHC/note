@@ -314,6 +314,113 @@ class Person:
         print "Hello, world! I'm %s." % self.name
 ```
 
-### 
+* 定义超类（类继承）
+```
+class SPAMFilter(Filter): # SPAMFilter是Filter的子类
+    def init(self): # 重写Filter超类中的init方法
+        self.blocked = ['SPAM']
+```
+
+* 构造方法
+```
+class FooBar:
+    def _init_(self):
+        self.somevar = 42
+>>> f = FooBar()
+>>> f.somevar
+42        
+```
+
+* 类继承super函数
+```
+_metaclass_ = type # super函数只在新式类中起作用
+class Bird:
+    def _init_(self):
+        self.hungry = True
+    def eat(self):
+        if self.hungry:
+            print 'Aaaah...'
+            self.hungry = False
+        else:
+            print 'No, thanks!'
+class SongBird(Bird):
+    def _init_(self):
+        super(SongBird, self)._init_()
+        self.sound = 'Squawk!'
+    def sing(self):
+        print self.sound
+>>> sb = SongBird()
+>>> sb.sing()
+Squawk!
+>>> sb.eat()
+Aaaah...
+>>> sb.eat()
+No, thanks!
+```
+
+* property()函数
+```
+_metaclass_ = type
+class Rectangle:
+    def _init_(self):
+        self.width = 0
+        self.height = 0
+    def setSize(self, size):
+        self.width, self.height = size
+    def getSize(self):
+        return self.width, self.height
+    size = property(getSize, setSize)
+>>> r = Rectangle()
+>>> r.width = 10
+>>> r.height = 5
+>>> r.size
+(10, 5)
+>>> r.size = 150, 100
+>>> r.width
+150          
+```
+
+### 异常
+* 内建异常  
+
+|类名|描述|
+|-----------|:---------:|
+|Exception|所有异常的基类|
+|AttributeError|特性引用或赋值失败时引发|
+|IOError|打开文件等引发|
+|IndexError|使用序列中不存在的索引引发|
+|KeyError|使用映射中不存在的键引发|
+|NameError|找不到名字（变量）时引发|
+|SyntaxError|代码为错误形式时引发|
+|TypeError|内建操作或者函数应用于错误类型的对象时引发|
+|ValueError|内建操作或者函数应用于正确类型的对象，但该对象使用不合适的值引发|
+|ZeroDivisionError|除法或者模除操作的第二个参数为0时引发|
+
+* 捕捉异常  
+错误处理器：try/except
+```
+try:
+    x = input('Enter the first number: ')
+    y = input('Enter the second number: ')
+
+    print x/y
+expect (ZeroDivisionError, TypeError, NameError):
+    print 'Your numbers were bogus ...'
+```
+
+* 引发异常
+调用：raise语句
+
+* 异常清理后
+```
+try:
+    1/0
+except NameError:
+    print "Unknown variable"
+else:
+    print "That went well!"
+finally:
+    print "Cleaning up."
+```
 
 [返回目录](../CONTENTS.md)
