@@ -314,7 +314,7 @@ class Person:
         print "Hello, world! I'm %s." % self.name
 ```
 
-* 定义超类（类继承）
+* 定义超类（类继承）
 ```
 class SPAMFilter(Filter): # SPAMFilter是Filter的子类
     def init(self): # 重写Filter超类中的init方法
@@ -392,7 +392,7 @@ class Rectangle:
 |KeyError|使用映射中不存在的键引发|
 |NameError|找不到名字（变量）时引发|
 |SyntaxError|代码为错误形式时引发|
-|TypeError|内建操作或者函数应用于错误类型的对象时引发|
+|TypeError|内建操作或者函数应用于错误类型的对象时引发|
 |ValueError|内建操作或者函数应用于正确类型的对象，但该对象使用不合适的值引发|
 |ZeroDivisionError|除法或者模除操作的第二个参数为0时引发|
 
@@ -408,7 +408,7 @@ expect (ZeroDivisionError, TypeError, NameError):
     print 'Your numbers were bogus ...'
 ```
 
-* 引发异常
+* 引发异常
 调用：raise语句
 
 * 异常清理后
