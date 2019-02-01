@@ -423,4 +423,53 @@ finally:
     print "Cleaning up."
 ```
 
+### 生成器
+生成器是一个包含**yield**关键字的函数，当它被调用时，函数体中的代码不会被执行，而会返回一个迭代器
+* 创建生成器
+```
+def flatten(nested):
+    for sublist in nested:
+        for element in sublist:
+            yield element # 函数停在此处，等待重新被唤醒
+
+>>> nested = [[1, 2], [3, 4], [5]]
+>>> list(flatten(nested))
+[1, 2, 3, 4, 5]
+```
+
+### 八皇后问题
+* 递归实现
+
+### 模块
+* 导入模块
+```
+# hello2.py
+def hello():
+    print "Hello, world!"
+
+>>> import hello2
+>>> hello2.hello()
+Hello, world!    
+```
+
+## 文件
+### 打开文件
+```
+open(name[, mode[, buffering]])
+```
+
+### 写文件
+```
+>>> f = open('somefile.txt', 'w')
+>>> f.write('Hello')
+>>> f.close()
+```
+
+### 读文件
+```
+>>> f = open('somefile.txt', 'r')
+>>> f.read(4)
+'Hell'
+```
+
 [返回目录](../CONTENTS.md)
