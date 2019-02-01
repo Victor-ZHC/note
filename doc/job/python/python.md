@@ -424,7 +424,7 @@ finally:
 ```
 
 ### 生成器
-生成器是一个包含**yield**关键字的函数，当它被调用时，函数体中的代码不会被执行，而会返回一个迭代器
+生成器是一个包含**yield**关键字的函数，当它被调用时，函数体中的代码不会被执行，而会返回一个迭代器
 * 创建生成器
 ```
 def flatten(nested):
@@ -443,7 +443,7 @@ def flatten(nested):
 ### 模块
 * 导入模块
 ```
-# hello2.py
+# hello2.py
 def hello():
     print "Hello, world!"
 
