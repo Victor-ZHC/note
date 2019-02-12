@@ -1,11 +1,11 @@
 # Salt概览
-* Salt是自动化基础框架，是远程执行的典型，允许用户在众多主机上运行命令
+* Salt是自动化基础框架，是远程执行的典型，允许用户在众多主机上运行命令
 
 ## Master和Minion
-* Salt基于一主（Master）控制多从（Minion）的思想，通常从Master上发送命令到一组Minion，然后执行命令中的既定任务，最后将执行结果返回到Master
+* Salt基于一主（Master）控制多从（Minion）的思想，通常从Master上发送命令到一组Minion，然后执行命令中的既定任务，最后将执行结果返回到Master
 
 ## Targeting Minion
-* Salt的每个远程执行都需要指定一个匹配的target，即：进行执行的Minion
+* Salt的每个远程执行都需要指定一个匹配的target，即：进行执行的Minion
 
 ## Salt命令
 * 在所有通配的Minion上执行test.ping命令：
@@ -76,7 +76,7 @@ salt <target> <模块名>.<方法> [参数...]
 * sys.doc：显示执行模块中公共方法的自述文档
 
 ## SLS文件树
-* SLS指代SaLt State，是Salt中常用的文件结构，采用键值对设计：每项都有唯一的键、引用一个值
+* SLS指代SaLt State，是Salt中常用的文件结构，采用键值对设计：每项都有唯一的键、引用一个值
 
 ### top.sls文件
 * State和Pillar系统中都有名为top.sls的文件，指定在什么环境为哪些Minion提供哪些执行文件
@@ -101,7 +101,7 @@ apache2:
 * require：强制State等待列表中定义的State都成功执行
 * watch：强制State在项目变更时执行指定动作
 * use：使用use的State不会将requisite继承过来
-* prereq：只有在另一个State预计会变更时才会需要运行
+* prereq：只有在另一个State预计会变更时才会需要运行
 
 ### 反转requisite
 * require_in：表示State X is required by State Y
@@ -126,7 +126,7 @@ apache2:
 ```
 
 ### 使用Pillar使变量集中化
-* Pillar的top.sls文件在配置和功能上与State的top.sls文件一致：首先声明一个环境，然后是一个target，最后是该target需要使用的SLS文件列表
+* Pillar的top.sls文件在配置和功能上与State的top.sls文件一致：首先声明一个环境，然后是一个target，最后是该target需要使用的SLS文件列表
 * 通过pillar.items查看所有Pillar数据，例：
 ```
 # salt myminion pillar.items
