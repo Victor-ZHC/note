@@ -1,5 +1,6 @@
 # Salt概览
 * Salt是自动化基础框架，是远程执行的典型，允许用户在众多主机上运行命令
+* Salt中最常见的远程执行时通过State进行配置管理
 
 ## Master和Minion
 * Salt基于一主（Master）控制多从（Minion）的思想，通常从Master上发送命令到一组Minion，然后执行命令中的既定任务，最后将执行结果返回到Master
@@ -130,6 +131,17 @@ apache2:
 * 通过pillar.items查看所有Pillar数据，例：
 ```
 # salt myminion pillar.items
+```
+
+## Jinja入门
+* Jinja是Salt中最常用的模板引擎，基于Python
+* 获取值：
+```
+{{grains['user']}}
+```
+* 设置值：
+```
+{% set myvar = 'My Value' %}
 ```
 
 [返回目录](../CONTENTS.md)
