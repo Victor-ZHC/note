@@ -2,7 +2,7 @@
 ## 目录
 - [Java](./doc/java/CONTENTS.md) 
 - [NodeJS](./doc/nodejs/CONTENTS.md)
-- [C/C++](./doc/cpp/CONTENTS.md)
+- [C/C++](./doc/c_cpp/CONTENTS.md)
 - [机器学习](./doc/machine_learning/CONTENTS.md)
 - [并行与分布式](./doc/distributed/CONTENTS.md)
 - [大数据](./doc/big_data/CONTENTS.md)
