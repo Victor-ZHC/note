@@ -2,6 +2,7 @@
 ## C语言基础
 - [简介](c/introduction.md)
 - [语法](c/grammer.md)
+- [输入/输出](c/io.md)
 
 ## C++基础
 - [语法](cpp/grammer.md)
