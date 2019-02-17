@@ -2,25 +2,25 @@
 
 ## Salt Cloud配置
 ### 全局配置
-* Salt Cloud基础配置通常配置在主配置文件中，路径为：/etc/salt/cloud
-* Salt Cloud遵循自上而下的配置，配置文件中定义每种类型的配置都会继承到下一级配置，除非进行覆盖操作。操作的顺序如下：
+* Salt Cloud基础配置通常配置在主配置文件中，路径为：/etc/salt/cloud
+* Salt Cloud遵循自上而下的配置，配置文件中定义每种类型的配置都会继承到下一级配置，除非进行覆盖操作。操作的顺序如下：
 ```
 1. /etc/salt/cloud
 2. Provider配置
 3. Profile配置
 4. cloud map
 ```
-* provider和profile配置块在Salt配置中需要保证唯一性
+* provider和profile配置块在Salt配置中需要保证唯一性
 
 ### Provider配置
-* Provider对应的是：允许创建新的计算实例的云主机公司，存储在：/etc/salt/cloud.providers文件或者/etc/salt/cloud.providers.d/目录下
+* Provider对应的是：允许创建新的计算实例的云主机公司，存储在：/etc/salt/cloud.providers文件或者/etc/salt/cloud.providers.d/目录下
 
 ### Profile配置
-* Profile配置用于构建配置块，最终定义某一类型的计算实例，存储在：/etc/salt/cloud.profiles文件或者/etc/salt/cloud.profiles.d/目录下
+* Profile配置用于构建配置块，最终定义某一类型的计算实例，存储在：/etc/salt/cloud.profiles文件或者/etc/salt/cloud.profiles.d/目录下
 
 ## 构建自定义部署脚本
 ### Salt Bootstrap脚本
-* Salt Cloud在非Windows计算实例上安装Salt时，默认采用Salt Bootstrap脚本进行部署
+* Salt Cloud在非Windows计算实例上安装Salt时，默认采用Salt Bootstrap脚本进行部署
 * 要求Salt Cloud更新Bootstrap：
 ```
 # salt-cloud --update-bootstrap
@@ -60,14 +60,14 @@
 * Cloud缓存事件可以用于联合自动伸缩系统
 
 ### 捕捉Cloud缓存事件
-* 一旦Cloud配置完成，如果Cloud缓存发生变化就发送事件，则可以建立一个反应器（Reactor）来响应事件
+* 一旦Cloud配置完成，如果Cloud缓存发生变化就发送事件，则可以建立一个反应器（Reactor）来响应事件
 * 当Salt Cloud使用--profile或--map参数来请求创建计算实例后，Salt Cloud会进行如下操作：
 ```
-1. 请求对应的云供应商创建一个计算实例
+1. 请求对应的云供应商创建一个计算实例
 2. 等待计算实例可用后的IP地址
-3. 等待该IP地址上的SSH/SMB服务可用
-4. 向该IP地址上传文件
-5. 执行部署脚本或Windows安装器
+3. 等待该IP地址上的SSH/SMB服务可用
+4. 向该IP地址上传文件
+5. 执行部署脚本或Windows安装器
 6. 清除临时脚本
 7. 返回给用户
 ```
