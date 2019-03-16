@@ -53,9 +53,32 @@
 
 ## 重要概念
 ### Cluster
-* 计算、存储和网络资源的集合
+* 是计算、存储和网络资源的集合
 
 ### Master
-* Cluster的大脑
+* 是Cluster的大脑，主要职责是调度，即决定将应用放在哪里运行
+* 为实现高可用，可以运行多个Master
+
+### Node
+* 职责是运行容器应用
+* 由Master管理，负责监控并汇报容器状态
+* 根据Master的要求管理容器的生命周期
+
+### Pod
+* 是Kubernetes的最小工作单元
+* 每个Pod包含一个或多个容器
+* Pod中的容器会作为整体被Master调度到一个Node上运行
+* Pod中的所有容器使用同一个网络namespace，即相同的IP地址和Port空间，相互可以直接用localhost通信
+
+### Controller
+* Kubernetes通常不会直接创建Pod，而是通过Controller来管理Pod，Controller中定义了Pod的部署特性，Kubernetes提供了多种Controller，包括：Deployment、ReplicaSet、DaemonSet、StatefuleSet、Job等
+
+### Service
+* Kubernetes Service定义了外界访问一组特定Pod的方式，Service有自己的IP和端口，Service为Pod提供了负载均衡
+* Kubernetes运行容器（Pod）与访问容器（Pod）两项任务分别由：Controller和Service执行
+
+### Namespace
+* Namespace将物理的Cluster逻辑上划分为多个虚拟Cluster，每个Cluster是一个Namespace，不同Namespace的资源完全隔离
+* Kubernetes默认创建了两个Namespace，default和kube-system
 
 [返回目录](../CONTENTS.md)
