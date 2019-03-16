@@ -81,4 +81,17 @@
 * Namespace将物理的Cluster逻辑上划分为多个虚拟Cluster，每个Cluster是一个Namespace，不同Namespace的资源完全隔离
 * Kubernetes默认创建了两个Namespace，default和kube-system
 
+## 部署Kubernetes Cluster
+### 安装Docker
+* 所有节点都需要安装Docker
+* 安装命令：
+```
+> apt-get update && apt-get install docker.io
+```
+
+### 安装kubelet、kubeadm和kubectl
+* kubelet：运行在cluster所有节点上，负责启动Pob和容器
+* kubeadm：用于初始化Cluster
+* kubectl：Kubernetes命令行工具，可以部署和管理应用，查看各种资源，创建、删除和更新各种组件
+
 [返回目录](../CONTENTS.md)

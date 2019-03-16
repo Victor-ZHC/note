@@ -18,5 +18,6 @@
 
 ### Kubernetes
 - [基础概念](./kubernetes/1_basic_concepts.md)
+- [架构设计](./kubernetes/2_architecture.md)
 
 [返回首页](../../CONTENTS.md)
