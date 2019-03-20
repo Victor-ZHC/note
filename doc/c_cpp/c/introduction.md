@@ -16,3 +16,5 @@ int main(void) {
 3. 链接： __连接器（Linker）__ 将机器指令与其他附加代码进行整合，最终产生可执行文件。
 
 * 目前GCC是最流行的C语言编译器，编译C文件可使用`gcc -o output.o file.c`命令。 
+
+[返回目录](../CONTENTS.md)
