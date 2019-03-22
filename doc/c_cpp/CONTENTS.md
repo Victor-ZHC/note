@@ -6,6 +6,9 @@
 - [运算符](c/operator.md)
 - [控制语句](c/control_statements.md)
 - [基本类型](c/basic_types.md)
+- [数组](c/array.md)
+- [函数](c/function.md)
+- [作用域](c/scope.md)
 
 ## C++基础
 - [语法](cpp/grammer.md)
