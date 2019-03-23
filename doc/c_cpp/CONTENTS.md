@@ -10,6 +10,7 @@
 - [函数](c/function.md)
 - [作用域](c/scope.md)
 - [指针](c/pointer.md)
+- [字符串](c/string.md)
 
 ## C++基础
 - [语法](cpp/grammer.md)
