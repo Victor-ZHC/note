@@ -9,6 +9,7 @@
 - [数组](c/array.md)
 - [函数](c/function.md)
 - [作用域](c/scope.md)
+- [指针](c/pointer.md)
 
 ## C++基础
 - [语法](cpp/grammer.md)
