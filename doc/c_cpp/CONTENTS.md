@@ -14,6 +14,8 @@
 - [预处理器](c/preprocessor.md)
 - [编写大型程序](c/project.md)
 - [结构、联合与枚举](c/struct_union_enum.md)
+- [声明](c/statement.md)
+- [底层程序设计](c/low_level_programming.md)
 
 ## C++基础
 - [语法](cpp/grammer.md)

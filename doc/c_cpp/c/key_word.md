@@ -23,9 +23,4 @@
 - 逻辑控制：if、else、for、while、do、break、continue、return、default、switch、case、goto
 - 特殊用途：sizeof、typedef
 
-### auto
-存储类别关键字，具有自动存储期的变量在进入声明该变量的程序块时被建立，它在该程序块活动时存在，退出该程序块时撤销。编译器会自动在局部变量被声明时添加auto关键字。
-
-`int a = 10` <==> `auto int a = 10`
-
 [返回目录](../CONTENTS.md)
