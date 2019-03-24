@@ -12,6 +12,8 @@
 - [指针](c/pointer.md)
 - [字符串](c/string.md)
 - [预处理器](c/preprocessor.md)
+- [编写大型程序](c/project.md)
+- [结构、联合与枚举](c/struct_union_enum.md)
 
 ## C++基础
 - [语法](cpp/grammer.md)
